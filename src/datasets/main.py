@@ -2,6 +2,7 @@ from .mnist import MNIST_Dataset
 from .fmnist import FashionMNIST_Dataset
 from .cifar10 import CIFAR10_Dataset
 from .galaxy_mnist import GalaxyMNIST_Dataset
+from .constructed_mnist import ConstructedMNIST_Dataset
 from .odds import ODDSADDataset
 
 
@@ -15,6 +16,7 @@ def load_dataset(dataset_name, data_path, normal_class, known_outlier_class, n_k
     'fmnist',
     'cifar10',
     'galaxy_mnist',
+    'constructed_mnist',
     'arrhythmia',
     'cardio',
     'satellite',
@@ -62,6 +64,17 @@ def load_dataset(dataset_name, data_path, normal_class, known_outlier_class, n_k
             ratio_known_normal=ratio_known_normal,
             ratio_known_outlier=ratio_known_outlier,
             ratio_pollution=ratio_pollution)
+    
+    if dataset_name == 'constructed_mnist':
+        dataset = ConstructedMNIST_Dataset(
+            root=data_path,
+            normal_class=normal_class,
+            known_outlier_class=known_outlier_class,
+            n_known_outlier_classes=n_known_outlier_classes,
+            ratio_known_normal=ratio_known_normal,
+            ratio_known_outlier=ratio_known_outlier,
+            ratio_pollution=ratio_pollution,
+        )
 
     if dataset_name in ('arrhythmia', 'cardio', 'satellite', 'satimage-2', 'shuttle', 'thyroid'):
         dataset = ODDSADDataset(root=data_path,
