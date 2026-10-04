@@ -63,7 +63,7 @@ class SSAD(object):
                 inputs = self.ae_net.encoder(inputs)  # in hybrid approach, take code representation of AE as features
             X_batch = inputs.view(inputs.size(0), -1)  # X_batch.shape = (batch_size, n_channels * height * width)
             X += (X_batch.cpu().data.numpy(),)
-            semi_targets += semi_targets_batch.cpu().data.numpy().astype(np.int).tolist()
+            semi_targets += semi_targets_batch.cpu().data.numpy().astype(np.int64).tolist()
         X, semi_targets = np.concatenate(X), np.array(semi_targets)
 
         # Training

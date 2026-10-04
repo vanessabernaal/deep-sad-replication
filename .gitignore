@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Downloaded datasets
+data/*
+!data/.gitkeep
+
+# Experiment outputs
+results/*
+!results/.gitkeep
+
+# Trained models and temporary files
+*.tar
+*.log
+
+# Local environments and secrets
+.venv/
+.env
