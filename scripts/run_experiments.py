@@ -24,6 +24,15 @@ EXPERIMENT_SUITES = {
         "labelled_anomaly_ratios": [0.0, 0.05],
         "seeds": [1, 2, 3],
     },
+
+    "constructed": {
+        "dataset": "constructed_mnist",
+        "network": "mnist_LeNet",
+        "normal_classes": [0],
+        "known_outlier_classes": [1, 2, 3],
+        "labelled_anomaly_ratios": [0.0, 0.05],
+        "seeds": [1, 2, 3],
+    },
 }
 
 
@@ -33,7 +42,7 @@ def parse_args():
     )
     parser.add_argument(
         "--suite",
-        choices=["mnist", "galaxy", "all"],
+        choices=["mnist", "galaxy", "constructed", "all"],
         required=True,
         help="Experiment suite to execute.",
     )
@@ -91,15 +100,21 @@ def ratio_name(ratio):
 
 def selected_suites(suite_name):
     if suite_name == "all":
-        return ["mnist", "galaxy"]
+        return ["mnist", "galaxy", "constructed"]
     return [suite_name]
 
 
 def build_experiments(suite_name):
     suite = EXPERIMENT_SUITES[suite_name]
 
-    for normal_class, ratio, seed in product(
+    known_outlier_classes = suite.get("known_outlier_classes")
+
+    if known_outlier_classes is None:
+        known_outlier_classes = [suite["known_outlier_class"]]
+
+    for normal_class, known_outlier_class, ratio, seed in product(
         suite["normal_classes"],
+        known_outlier_classes,
         suite["labelled_anomaly_ratios"],
         suite["seeds"],
     ):
@@ -108,7 +123,7 @@ def build_experiments(suite_name):
             "dataset": suite["dataset"],
             "network": suite["network"],
             "normal_class": normal_class,
-            "known_outlier_class": suite["known_outlier_class"],
+            "known_outlier_class": known_outlier_class,
             "ratio_known_outlier": ratio,
             "n_known_outlier_classes": 0 if ratio == 0.0 else 1,
             "seed": seed,
@@ -116,9 +131,21 @@ def build_experiments(suite_name):
 
 
 def experiment_directory(results_root, experiment):
+    directory = results_root / experiment["suite"]
+
+    if experiment["suite"] == "constructed":
+        corruption_names = {
+            1: "rotation",
+            2: "gaussian-noise",
+            3: "square-occlusion",
+        }
+        corruption_name = corruption_names[
+            experiment["known_outlier_class"]
+        ]
+        directory = directory / f"corruption-{corruption_name}"
+
     return (
-        results_root
-        / experiment["suite"]
+        directory
         / f"normal-{experiment['normal_class']}"
         / f"ratio-{ratio_name(experiment['ratio_known_outlier'])}"
         / f"seed-{experiment['seed']}"
