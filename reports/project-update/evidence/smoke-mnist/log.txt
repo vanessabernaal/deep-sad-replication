@@ -1,0 +1,50 @@
+2026-10-04 02:41:22,383 - root - INFO - Log file is results/smoke-mnist/log.txt
+2026-10-04 02:41:22,383 - root - INFO - Data path is data
+2026-10-04 02:41:22,383 - root - INFO - Export path is results/smoke-mnist
+2026-10-04 02:41:22,383 - root - INFO - Dataset: mnist
+2026-10-04 02:41:22,383 - root - INFO - Normal class: 0
+2026-10-04 02:41:22,383 - root - INFO - Ratio of labeled normal train samples: 0.00
+2026-10-04 02:41:22,383 - root - INFO - Ratio of labeled anomalous samples: 0.05
+2026-10-04 02:41:22,383 - root - INFO - Pollution ratio of unlabeled train data: 0.00
+2026-10-04 02:41:22,383 - root - INFO - Known anomaly class: 1
+2026-10-04 02:41:22,383 - root - INFO - Network: mnist_LeNet
+2026-10-04 02:41:22,383 - root - INFO - Eta-parameter: 1.00
+2026-10-04 02:41:22,389 - root - INFO - Set seed to 1.
+2026-10-04 02:41:22,390 - root - INFO - Computation device: cpu
+2026-10-04 02:41:22,391 - root - INFO - Number of threads: 0
+2026-10-04 02:41:22,391 - root - INFO - Number of dataloader workers: 0
+2026-10-04 02:41:33,072 - root - INFO - Pretraining: True
+2026-10-04 02:41:33,072 - root - INFO - Pretraining optimizer: adam
+2026-10-04 02:41:33,073 - root - INFO - Pretraining learning rate: 0.001
+2026-10-04 02:41:33,073 - root - INFO - Pretraining epochs: 1
+2026-10-04 02:41:33,073 - root - INFO - Pretraining learning rate scheduler milestones: (0,)
+2026-10-04 02:41:33,073 - root - INFO - Pretraining batch size: 128
+2026-10-04 02:41:33,073 - root - INFO - Pretraining weight decay: 1e-06
+2026-10-04 02:41:33,076 - root - INFO - Starting pretraining...
+2026-10-04 02:41:33,078 - root - INFO -   LR scheduler: new learning rate is 0.0001
+2026-10-04 02:41:37,883 - root - INFO - | Epoch: 001/001 | Train Time: 4.805s | Train Loss: 0.287803 |
+2026-10-04 02:41:37,884 - root - INFO - Pretraining Time: 4.807s
+2026-10-04 02:41:37,884 - root - INFO - Finished pretraining.
+2026-10-04 02:41:37,884 - root - INFO - Testing autoencoder...
+2026-10-04 02:41:40,235 - root - INFO - Test Loss: 0.258607
+2026-10-04 02:41:40,235 - root - INFO - Test AUC: 72.64%
+2026-10-04 02:41:40,235 - root - INFO - Test Time: 2.314s
+2026-10-04 02:41:40,235 - root - INFO - Finished testing autoencoder.
+2026-10-04 02:41:40,236 - root - INFO - Training optimizer: adam
+2026-10-04 02:41:40,236 - root - INFO - Training learning rate: 0.001
+2026-10-04 02:41:40,237 - root - INFO - Training epochs: 1
+2026-10-04 02:41:40,237 - root - INFO - Training learning rate scheduler milestones: (0,)
+2026-10-04 02:41:40,237 - root - INFO - Training batch size: 128
+2026-10-04 02:41:40,237 - root - INFO - Training weight decay: 1e-06
+2026-10-04 02:41:40,237 - root - INFO - Initializing center c...
+2026-10-04 02:41:41,381 - root - INFO - Center c initialized.
+2026-10-04 02:41:41,381 - root - INFO - Starting training...
+2026-10-04 02:41:41,381 - root - INFO -   LR scheduler: new learning rate is 0.0001
+2026-10-04 02:41:42,936 - root - INFO - | Epoch: 001/001 | Train Time: 1.555s | Train Loss: 3.451792 |
+2026-10-04 02:41:42,937 - root - INFO - Training Time: 1.555s
+2026-10-04 02:41:42,937 - root - INFO - Finished training.
+2026-10-04 02:41:42,937 - root - INFO - Starting testing...
+2026-10-04 02:41:44,460 - root - INFO - Test Loss: 2.809757
+2026-10-04 02:41:44,460 - root - INFO - Test AUC: 95.21%
+2026-10-04 02:41:44,460 - root - INFO - Test Time: 1.518s
+2026-10-04 02:41:44,461 - root - INFO - Finished testing.
