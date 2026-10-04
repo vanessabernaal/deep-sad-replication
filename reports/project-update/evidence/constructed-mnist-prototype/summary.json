@@ -1,0 +1,32 @@
+{
+  "seed": 1,
+  "severity": 1,
+  "corruption_parameters": {
+    "rotation_degrees": 15.0,
+    "noise_std": 0.15,
+    "occlusion_size": 6
+  },
+  "source_images_per_split": 100,
+  "generated_images_per_split": 400,
+  "train_corruption_counts": {
+    "clean": 100,
+    "rotation": 100,
+    "gaussian_noise": 100,
+    "square_occlusion": 100
+  },
+  "test_corruption_counts": {
+    "clean": 100,
+    "rotation": 100,
+    "gaussian_noise": 100,
+    "square_occlusion": 100
+  },
+  "image_shape": [
+    1,
+    28,
+    28
+  ],
+  "value_range": [
+    0.0,
+    1.0
+  ]
+}

@@ -1,0 +1,801 @@
+split,source_index,digit_label,corruption,severity,parameters,seed
+train,23392,5,clean,0,{},1
+train,23392,5,rotation,1,"{""angle_degrees"": 15.0}",1
+train,23392,5,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,23392,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 21, ""square_size"": 6, ""top"": 5}",1
+train,45133,2,clean,0,{},1
+train,45133,2,rotation,1,"{""angle_degrees"": -15.0}",1
+train,45133,2,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,45133,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 16}",1
+train,52967,1,clean,0,{},1
+train,52967,1,rotation,1,"{""angle_degrees"": 15.0}",1
+train,52967,1,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,52967,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 16}",1
+train,24679,8,clean,0,{},1
+train,24679,8,rotation,1,"{""angle_degrees"": -15.0}",1
+train,24679,8,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,24679,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 7, ""square_size"": 6, ""top"": 8}",1
+train,50204,9,clean,0,{},1
+train,50204,9,rotation,1,"{""angle_degrees"": -15.0}",1
+train,50204,9,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,50204,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 8}",1
+train,41834,3,clean,0,{},1
+train,41834,3,rotation,1,"{""angle_degrees"": 15.0}",1
+train,41834,3,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,41834,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 7}",1
+train,37415,0,clean,0,{},1
+train,37415,0,rotation,1,"{""angle_degrees"": 15.0}",1
+train,37415,0,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,37415,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 3, ""square_size"": 6, ""top"": 10}",1
+train,18748,2,clean,0,{},1
+train,18748,2,rotation,1,"{""angle_degrees"": 15.0}",1
+train,18748,2,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,18748,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 7, ""square_size"": 6, ""top"": 19}",1
+train,26328,5,clean,0,{},1
+train,26328,5,rotation,1,"{""angle_degrees"": 15.0}",1
+train,26328,5,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,26328,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 12}",1
+train,17081,9,clean,0,{},1
+train,17081,9,rotation,1,"{""angle_degrees"": -15.0}",1
+train,17081,9,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,17081,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 11}",1
+train,31488,3,clean,0,{},1
+train,31488,3,rotation,1,"{""angle_degrees"": 15.0}",1
+train,31488,3,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,31488,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 14}",1
+train,20051,3,clean,0,{},1
+train,20051,3,rotation,1,"{""angle_degrees"": -15.0}",1
+train,20051,3,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,20051,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 3}",1
+train,59115,7,clean,0,{},1
+train,59115,7,rotation,1,"{""angle_degrees"": -15.0}",1
+train,59115,7,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,59115,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 6}",1
+train,15679,2,clean,0,{},1
+train,15679,2,rotation,1,"{""angle_degrees"": -15.0}",1
+train,15679,2,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,15679,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 5}",1
+train,41034,8,clean,0,{},1
+train,41034,8,rotation,1,"{""angle_degrees"": -15.0}",1
+train,41034,8,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,41034,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 7}",1
+train,58614,7,clean,0,{},1
+train,58614,7,rotation,1,"{""angle_degrees"": 15.0}",1
+train,58614,7,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,58614,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 16, ""square_size"": 6, ""top"": 5}",1
+train,47062,7,clean,0,{},1
+train,47062,7,rotation,1,"{""angle_degrees"": 15.0}",1
+train,47062,7,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,47062,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 16, ""square_size"": 6, ""top"": 8}",1
+train,12384,4,clean,0,{},1
+train,12384,4,rotation,1,"{""angle_degrees"": -15.0}",1
+train,12384,4,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,12384,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 10}",1
+train,11295,0,clean,0,{},1
+train,11295,0,rotation,1,"{""angle_degrees"": 15.0}",1
+train,11295,0,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,11295,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 15}",1
+train,8890,4,clean,0,{},1
+train,8890,4,rotation,1,"{""angle_degrees"": -15.0}",1
+train,8890,4,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,8890,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 21}",1
+train,5638,2,clean,0,{},1
+train,5638,2,rotation,1,"{""angle_degrees"": 15.0}",1
+train,5638,2,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,5638,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 12}",1
+train,31647,1,clean,0,{},1
+train,31647,1,rotation,1,"{""angle_degrees"": 15.0}",1
+train,31647,1,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,31647,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 16}",1
+train,57185,2,clean,0,{},1
+train,57185,2,rotation,1,"{""angle_degrees"": -15.0}",1
+train,57185,2,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,57185,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 20, ""square_size"": 6, ""top"": 17}",1
+train,41116,9,clean,0,{},1
+train,41116,9,rotation,1,"{""angle_degrees"": 15.0}",1
+train,41116,9,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,41116,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 13}",1
+train,48215,4,clean,0,{},1
+train,48215,4,rotation,1,"{""angle_degrees"": -15.0}",1
+train,48215,4,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,48215,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 21}",1
+train,22993,7,clean,0,{},1
+train,22993,7,rotation,1,"{""angle_degrees"": 15.0}",1
+train,22993,7,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,22993,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 12}",1
+train,7339,3,clean,0,{},1
+train,7339,3,rotation,1,"{""angle_degrees"": -15.0}",1
+train,7339,3,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,7339,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 11}",1
+train,43907,8,clean,0,{},1
+train,43907,8,rotation,1,"{""angle_degrees"": 15.0}",1
+train,43907,8,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,43907,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 11}",1
+train,52623,4,clean,0,{},1
+train,52623,4,rotation,1,"{""angle_degrees"": 15.0}",1
+train,52623,4,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,52623,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 14}",1
+train,59868,0,clean,0,{},1
+train,59868,0,rotation,1,"{""angle_degrees"": -15.0}",1
+train,59868,0,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,59868,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 18, ""square_size"": 6, ""top"": 3}",1
+train,13318,6,clean,0,{},1
+train,13318,6,rotation,1,"{""angle_degrees"": -15.0}",1
+train,13318,6,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,13318,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 2}",1
+train,38782,6,clean,0,{},1
+train,38782,6,rotation,1,"{""angle_degrees"": 15.0}",1
+train,38782,6,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,38782,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 18}",1
+train,59295,9,clean,0,{},1
+train,59295,9,rotation,1,"{""angle_degrees"": -15.0}",1
+train,59295,9,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,59295,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 7, ""square_size"": 6, ""top"": 18}",1
+train,58970,5,clean,0,{},1
+train,58970,5,rotation,1,"{""angle_degrees"": 15.0}",1
+train,58970,5,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,58970,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 16}",1
+train,4967,8,clean,0,{},1
+train,4967,8,rotation,1,"{""angle_degrees"": 15.0}",1
+train,4967,8,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,4967,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 15}",1
+train,19389,4,clean,0,{},1
+train,19389,4,rotation,1,"{""angle_degrees"": -15.0}",1
+train,19389,4,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,19389,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 17}",1
+train,31979,5,clean,0,{},1
+train,31979,5,rotation,1,"{""angle_degrees"": 15.0}",1
+train,31979,5,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,31979,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 15}",1
+train,39584,4,clean,0,{},1
+train,39584,4,rotation,1,"{""angle_degrees"": -15.0}",1
+train,39584,4,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,39584,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 3, ""square_size"": 6, ""top"": 15}",1
+train,28944,2,clean,0,{},1
+train,28944,2,rotation,1,"{""angle_degrees"": -15.0}",1
+train,28944,2,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,28944,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 14}",1
+train,9769,8,clean,0,{},1
+train,9769,8,rotation,1,"{""angle_degrees"": 15.0}",1
+train,9769,8,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,9769,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 12}",1
+train,11448,6,clean,0,{},1
+train,11448,6,rotation,1,"{""angle_degrees"": 15.0}",1
+train,11448,6,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,11448,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 17}",1
+train,7940,9,clean,0,{},1
+train,7940,9,rotation,1,"{""angle_degrees"": 15.0}",1
+train,7940,9,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,7940,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 12}",1
+train,12367,1,clean,0,{},1
+train,12367,1,rotation,1,"{""angle_degrees"": -15.0}",1
+train,12367,1,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,12367,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 7}",1
+train,35468,6,clean,0,{},1
+train,35468,6,rotation,1,"{""angle_degrees"": -15.0}",1
+train,35468,6,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,35468,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 10}",1
+train,50147,7,clean,0,{},1
+train,50147,7,rotation,1,"{""angle_degrees"": -15.0}",1
+train,50147,7,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,50147,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 15}",1
+train,16570,9,clean,0,{},1
+train,16570,9,rotation,1,"{""angle_degrees"": 15.0}",1
+train,16570,9,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,16570,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 5}",1
+train,38700,1,clean,0,{},1
+train,38700,1,rotation,1,"{""angle_degrees"": 15.0}",1
+train,38700,1,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,38700,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 21}",1
+train,15545,7,clean,0,{},1
+train,15545,7,rotation,1,"{""angle_degrees"": 15.0}",1
+train,15545,7,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,15545,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 18, ""square_size"": 6, ""top"": 8}",1
+train,34317,7,clean,0,{},1
+train,34317,7,rotation,1,"{""angle_degrees"": -15.0}",1
+train,34317,7,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,34317,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 5, ""square_size"": 6, ""top"": 6}",1
+train,15986,3,clean,0,{},1
+train,15986,3,rotation,1,"{""angle_degrees"": -15.0}",1
+train,15986,3,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,15986,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 8}",1
+train,21481,5,clean,0,{},1
+train,21481,5,rotation,1,"{""angle_degrees"": -15.0}",1
+train,21481,5,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,21481,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 4, ""square_size"": 6, ""top"": 19}",1
+train,26535,1,clean,0,{},1
+train,26535,1,rotation,1,"{""angle_degrees"": 15.0}",1
+train,26535,1,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,26535,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 6}",1
+train,40065,9,clean,0,{},1
+train,40065,9,rotation,1,"{""angle_degrees"": -15.0}",1
+train,40065,9,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,40065,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 7, ""square_size"": 6, ""top"": 9}",1
+train,57283,1,clean,0,{},1
+train,57283,1,rotation,1,"{""angle_degrees"": 15.0}",1
+train,57283,1,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,57283,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 6}",1
+train,10008,5,clean,0,{},1
+train,10008,5,rotation,1,"{""angle_degrees"": 15.0}",1
+train,10008,5,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,10008,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 7, ""square_size"": 6, ""top"": 12}",1
+train,24318,5,clean,0,{},1
+train,24318,5,rotation,1,"{""angle_degrees"": -15.0}",1
+train,24318,5,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,24318,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 19}",1
+train,26952,8,clean,0,{},1
+train,26952,8,rotation,1,"{""angle_degrees"": 15.0}",1
+train,26952,8,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,26952,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 6}",1
+train,1295,3,clean,0,{},1
+train,1295,3,rotation,1,"{""angle_degrees"": -15.0}",1
+train,1295,3,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,1295,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 19}",1
+train,9179,2,clean,0,{},1
+train,9179,2,rotation,1,"{""angle_degrees"": -15.0}",1
+train,9179,2,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,9179,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 16}",1
+train,4681,3,clean,0,{},1
+train,4681,3,rotation,1,"{""angle_degrees"": 15.0}",1
+train,4681,3,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,4681,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 5}",1
+train,47856,5,clean,0,{},1
+train,47856,5,rotation,1,"{""angle_degrees"": -15.0}",1
+train,47856,5,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,47856,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 8}",1
+train,37907,4,clean,0,{},1
+train,37907,4,rotation,1,"{""angle_degrees"": 15.0}",1
+train,37907,4,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,37907,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 11}",1
+train,28814,0,clean,0,{},1
+train,28814,0,rotation,1,"{""angle_degrees"": -15.0}",1
+train,28814,0,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,28814,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 5}",1
+train,51008,8,clean,0,{},1
+train,51008,8,rotation,1,"{""angle_degrees"": 15.0}",1
+train,51008,8,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,51008,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 10}",1
+train,26868,5,clean,0,{},1
+train,26868,5,rotation,1,"{""angle_degrees"": 15.0}",1
+train,26868,5,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,26868,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 17}",1
+train,4303,7,clean,0,{},1
+train,4303,7,rotation,1,"{""angle_degrees"": 15.0}",1
+train,4303,7,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,4303,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 13}",1
+train,3938,3,clean,0,{},1
+train,3938,3,rotation,1,"{""angle_degrees"": -15.0}",1
+train,3938,3,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,3938,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 5, ""square_size"": 6, ""top"": 19}",1
+train,30606,1,clean,0,{},1
+train,30606,1,rotation,1,"{""angle_degrees"": -15.0}",1
+train,30606,1,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,30606,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 4}",1
+train,39857,1,clean,0,{},1
+train,39857,1,rotation,1,"{""angle_degrees"": -15.0}",1
+train,39857,1,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,39857,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 17}",1
+train,54820,6,clean,0,{},1
+train,54820,6,rotation,1,"{""angle_degrees"": -15.0}",1
+train,54820,6,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,54820,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 9}",1
+train,19035,5,clean,0,{},1
+train,19035,5,rotation,1,"{""angle_degrees"": 15.0}",1
+train,19035,5,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,19035,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 10}",1
+train,44284,4,clean,0,{},1
+train,44284,4,rotation,1,"{""angle_degrees"": 15.0}",1
+train,44284,4,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,44284,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 18}",1
+train,40694,1,clean,0,{},1
+train,40694,1,rotation,1,"{""angle_degrees"": 15.0}",1
+train,40694,1,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,40694,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 6}",1
+train,53215,6,clean,0,{},1
+train,53215,6,rotation,1,"{""angle_degrees"": -15.0}",1
+train,53215,6,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,53215,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 12}",1
+train,49930,6,clean,0,{},1
+train,49930,6,rotation,1,"{""angle_degrees"": -15.0}",1
+train,49930,6,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,49930,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 17}",1
+train,54806,2,clean,0,{},1
+train,54806,2,rotation,1,"{""angle_degrees"": -15.0}",1
+train,54806,2,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,54806,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 11}",1
+train,51520,0,clean,0,{},1
+train,51520,0,rotation,1,"{""angle_degrees"": 15.0}",1
+train,51520,0,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,51520,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 12}",1
+train,23810,3,clean,0,{},1
+train,23810,3,rotation,1,"{""angle_degrees"": 15.0}",1
+train,23810,3,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,23810,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 7, ""square_size"": 6, ""top"": 12}",1
+train,1784,6,clean,0,{},1
+train,1784,6,rotation,1,"{""angle_degrees"": 15.0}",1
+train,1784,6,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,1784,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 20}",1
+train,43722,7,clean,0,{},1
+train,43722,7,rotation,1,"{""angle_degrees"": -15.0}",1
+train,43722,7,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,43722,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 15}",1
+train,55087,4,clean,0,{},1
+train,55087,4,rotation,1,"{""angle_degrees"": -15.0}",1
+train,55087,4,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,55087,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 11}",1
+train,26430,9,clean,0,{},1
+train,26430,9,rotation,1,"{""angle_degrees"": -15.0}",1
+train,26430,9,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,26430,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 19}",1
+train,35217,0,clean,0,{},1
+train,35217,0,rotation,1,"{""angle_degrees"": 15.0}",1
+train,35217,0,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,35217,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 7}",1
+train,44103,0,clean,0,{},1
+train,44103,0,rotation,1,"{""angle_degrees"": -15.0}",1
+train,44103,0,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,44103,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 7}",1
+train,34831,2,clean,0,{},1
+train,34831,2,rotation,1,"{""angle_degrees"": 15.0}",1
+train,34831,2,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,34831,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 18, ""square_size"": 6, ""top"": 7}",1
+train,5997,8,clean,0,{},1
+train,5997,8,rotation,1,"{""angle_degrees"": -15.0}",1
+train,5997,8,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,5997,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 13}",1
+train,16714,1,clean,0,{},1
+train,16714,1,rotation,1,"{""angle_degrees"": 15.0}",1
+train,16714,1,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,16714,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 12}",1
+train,45719,9,clean,0,{},1
+train,45719,9,rotation,1,"{""angle_degrees"": 15.0}",1
+train,45719,9,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,45719,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 4, ""square_size"": 6, ""top"": 11}",1
+train,51036,9,clean,0,{},1
+train,51036,9,rotation,1,"{""angle_degrees"": -15.0}",1
+train,51036,9,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,51036,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 13}",1
+train,25956,4,clean,0,{},1
+train,25956,4,rotation,1,"{""angle_degrees"": -15.0}",1
+train,25956,4,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,25956,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 14}",1
+train,20116,8,clean,0,{},1
+train,20116,8,rotation,1,"{""angle_degrees"": 15.0}",1
+train,20116,8,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,20116,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 10}",1
+train,8798,7,clean,0,{},1
+train,8798,7,rotation,1,"{""angle_degrees"": 15.0}",1
+train,8798,7,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,8798,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 21}",1
+train,41785,6,clean,0,{},1
+train,41785,6,rotation,1,"{""angle_degrees"": -15.0}",1
+train,41785,6,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,41785,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 17}",1
+train,4650,2,clean,0,{},1
+train,4650,2,rotation,1,"{""angle_degrees"": -15.0}",1
+train,4650,2,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,4650,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 4}",1
+train,24937,8,clean,0,{},1
+train,24937,8,rotation,1,"{""angle_degrees"": 15.0}",1
+train,24937,8,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,24937,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 20}",1
+train,2736,0,clean,0,{},1
+train,2736,0,rotation,1,"{""angle_degrees"": 15.0}",1
+train,2736,0,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,2736,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 5}",1
+train,27149,6,clean,0,{},1
+train,27149,6,rotation,1,"{""angle_degrees"": 15.0}",1
+train,27149,6,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,27149,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 18}",1
+train,30923,0,clean,0,{},1
+train,30923,0,rotation,1,"{""angle_degrees"": 15.0}",1
+train,30923,0,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,30923,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 16, ""square_size"": 6, ""top"": 14}",1
+train,51623,0,clean,0,{},1
+train,51623,0,rotation,1,"{""angle_degrees"": -15.0}",1
+train,51623,0,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,51623,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 2, ""square_size"": 6, ""top"": 9}",1
+train,16414,3,clean,0,{},1
+train,16414,3,rotation,1,"{""angle_degrees"": -15.0}",1
+train,16414,3,gaussian_noise,1,"{""noise_std"": 0.15}",1
+train,16414,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 7}",1
+test,8361,2,clean,0,{},2
+test,8361,2,rotation,1,"{""angle_degrees"": 15.0}",2
+test,8361,2,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8361,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 13}",2
+test,7127,8,clean,0,{},2
+test,7127,8,rotation,1,"{""angle_degrees"": 15.0}",2
+test,7127,8,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,7127,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 7}",2
+test,143,1,clean,0,{},2
+test,143,1,rotation,1,"{""angle_degrees"": -15.0}",2
+test,143,1,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,143,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 19}",2
+test,6467,8,clean,0,{},2
+test,6467,8,rotation,1,"{""angle_degrees"": 15.0}",2
+test,6467,8,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,6467,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 5}",2
+test,1103,9,clean,0,{},2
+test,1103,9,rotation,1,"{""angle_degrees"": 15.0}",2
+test,1103,9,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,1103,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 4}",2
+test,2519,1,clean,0,{},2
+test,2519,1,rotation,1,"{""angle_degrees"": -15.0}",2
+test,2519,1,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,2519,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 9}",2
+test,8690,9,clean,0,{},2
+test,8690,9,rotation,1,"{""angle_degrees"": 15.0}",2
+test,8690,9,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8690,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 22}",2
+test,14,1,clean,0,{},2
+test,14,1,rotation,1,"{""angle_degrees"": -15.0}",2
+test,14,1,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,14,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 15}",2
+test,5311,9,clean,0,{},2
+test,5311,9,rotation,1,"{""angle_degrees"": 15.0}",2
+test,5311,9,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,5311,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 6}",2
+test,9838,1,clean,0,{},2
+test,9838,1,rotation,1,"{""angle_degrees"": 15.0}",2
+test,9838,1,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,9838,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 20}",2
+test,901,4,clean,0,{},2
+test,901,4,rotation,1,"{""angle_degrees"": 15.0}",2
+test,901,4,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,901,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 17, ""square_size"": 6, ""top"": 16}",2
+test,3991,6,clean,0,{},2
+test,3991,6,rotation,1,"{""angle_degrees"": -15.0}",2
+test,3991,6,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,3991,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 11}",2
+test,1777,0,clean,0,{},2
+test,1777,0,rotation,1,"{""angle_degrees"": 15.0}",2
+test,1777,0,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,1777,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 5, ""square_size"": 6, ""top"": 9}",2
+test,9225,2,clean,0,{},2
+test,9225,2,rotation,1,"{""angle_degrees"": -15.0}",2
+test,9225,2,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,9225,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 16}",2
+test,8059,2,clean,0,{},2
+test,8059,2,rotation,1,"{""angle_degrees"": 15.0}",2
+test,8059,2,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8059,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 18}",2
+test,9689,1,clean,0,{},2
+test,9689,1,rotation,1,"{""angle_degrees"": 15.0}",2
+test,9689,1,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,9689,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 9}",2
+test,2361,9,clean,0,{},2
+test,2361,9,rotation,1,"{""angle_degrees"": -15.0}",2
+test,2361,9,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,2361,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 7, ""square_size"": 6, ""top"": 21}",2
+test,1330,4,clean,0,{},2
+test,1330,4,rotation,1,"{""angle_degrees"": -15.0}",2
+test,1330,4,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,1330,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 16, ""square_size"": 6, ""top"": 6}",2
+test,1291,3,clean,0,{},2
+test,1291,3,rotation,1,"{""angle_degrees"": -15.0}",2
+test,1291,3,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,1291,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 21}",2
+test,6908,5,clean,0,{},2
+test,6908,5,rotation,1,"{""angle_degrees"": 15.0}",2
+test,6908,5,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,6908,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 5}",2
+test,5482,7,clean,0,{},2
+test,5482,7,rotation,1,"{""angle_degrees"": 15.0}",2
+test,5482,7,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,5482,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 13}",2
+test,392,6,clean,0,{},2
+test,392,6,rotation,1,"{""angle_degrees"": 15.0}",2
+test,392,6,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,392,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 17}",2
+test,5409,4,clean,0,{},2
+test,5409,4,rotation,1,"{""angle_degrees"": 15.0}",2
+test,5409,4,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,5409,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 7, ""square_size"": 6, ""top"": 15}",2
+test,8065,8,clean,0,{},2
+test,8065,8,rotation,1,"{""angle_degrees"": 15.0}",2
+test,8065,8,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8065,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 14}",2
+test,1096,7,clean,0,{},2
+test,1096,7,rotation,1,"{""angle_degrees"": 15.0}",2
+test,1096,7,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,1096,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 15}",2
+test,7659,5,clean,0,{},2
+test,7659,5,rotation,1,"{""angle_degrees"": 15.0}",2
+test,7659,5,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,7659,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 4}",2
+test,843,4,clean,0,{},2
+test,843,4,rotation,1,"{""angle_degrees"": -15.0}",2
+test,843,4,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,843,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 7, ""square_size"": 6, ""top"": 11}",2
+test,4866,4,clean,0,{},2
+test,4866,4,rotation,1,"{""angle_degrees"": -15.0}",2
+test,4866,4,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,4866,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 16}",2
+test,4893,4,clean,0,{},2
+test,4893,4,rotation,1,"{""angle_degrees"": 15.0}",2
+test,4893,4,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,4893,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 10}",2
+test,6811,3,clean,0,{},2
+test,6811,3,rotation,1,"{""angle_degrees"": -15.0}",2
+test,6811,3,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,6811,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 15}",2
+test,7829,3,clean,0,{},2
+test,7829,3,rotation,1,"{""angle_degrees"": -15.0}",2
+test,7829,3,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,7829,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 16}",2
+test,910,4,clean,0,{},2
+test,910,4,rotation,1,"{""angle_degrees"": 15.0}",2
+test,910,4,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,910,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 14, ""square_size"": 6, ""top"": 18}",2
+test,1501,9,clean,0,{},2
+test,1501,9,rotation,1,"{""angle_degrees"": 15.0}",2
+test,1501,9,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,1501,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 7, ""square_size"": 6, ""top"": 7}",2
+test,8095,4,clean,0,{},2
+test,8095,4,rotation,1,"{""angle_degrees"": -15.0}",2
+test,8095,4,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8095,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 2}",2
+test,8432,1,clean,0,{},2
+test,8432,1,rotation,1,"{""angle_degrees"": -15.0}",2
+test,8432,1,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8432,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 17}",2
+test,4580,1,clean,0,{},2
+test,4580,1,rotation,1,"{""angle_degrees"": 15.0}",2
+test,4580,1,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,4580,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 14}",2
+test,8192,5,clean,0,{},2
+test,8192,5,rotation,1,"{""angle_degrees"": 15.0}",2
+test,8192,5,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8192,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 7, ""square_size"": 6, ""top"": 8}",2
+test,7065,3,clean,0,{},2
+test,7065,3,rotation,1,"{""angle_degrees"": 15.0}",2
+test,7065,3,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,7065,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 3}",2
+test,4040,9,clean,0,{},2
+test,4040,9,rotation,1,"{""angle_degrees"": -15.0}",2
+test,4040,9,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,4040,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 16}",2
+test,5456,9,clean,0,{},2
+test,5456,9,rotation,1,"{""angle_degrees"": 15.0}",2
+test,5456,9,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,5456,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 16, ""square_size"": 6, ""top"": 8}",2
+test,9829,9,clean,0,{},2
+test,9829,9,rotation,1,"{""angle_degrees"": 15.0}",2
+test,9829,9,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,9829,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 5}",2
+test,2362,8,clean,0,{},2
+test,2362,8,rotation,1,"{""angle_degrees"": -15.0}",2
+test,2362,8,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,2362,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 2}",2
+test,9662,3,clean,0,{},2
+test,9662,3,rotation,1,"{""angle_degrees"": 15.0}",2
+test,9662,3,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,9662,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 19, ""square_size"": 6, ""top"": 4}",2
+test,2721,6,clean,0,{},2
+test,2721,6,rotation,1,"{""angle_degrees"": -15.0}",2
+test,2721,6,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,2721,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 13}",2
+test,3622,6,clean,0,{},2
+test,3622,6,rotation,1,"{""angle_degrees"": 15.0}",2
+test,3622,6,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,3622,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 16, ""square_size"": 6, ""top"": 17}",2
+test,8492,2,clean,0,{},2
+test,8492,2,rotation,1,"{""angle_degrees"": 15.0}",2
+test,8492,2,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8492,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 10}",2
+test,8324,1,clean,0,{},2
+test,8324,1,rotation,1,"{""angle_degrees"": -15.0}",2
+test,8324,1,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8324,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 18}",2
+test,9147,7,clean,0,{},2
+test,9147,7,rotation,1,"{""angle_degrees"": 15.0}",2
+test,9147,7,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,9147,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 11}",2
+test,2152,8,clean,0,{},2
+test,2152,8,rotation,1,"{""angle_degrees"": 15.0}",2
+test,2152,8,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,2152,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 4}",2
+test,368,6,clean,0,{},2
+test,368,6,rotation,1,"{""angle_degrees"": -15.0}",2
+test,368,6,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,368,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 13}",2
+test,8116,6,clean,0,{},2
+test,8116,6,rotation,1,"{""angle_degrees"": 15.0}",2
+test,8116,6,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8116,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 4, ""square_size"": 6, ""top"": 11}",2
+test,9889,3,clean,0,{},2
+test,9889,3,rotation,1,"{""angle_degrees"": 15.0}",2
+test,9889,3,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,9889,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 4, ""square_size"": 6, ""top"": 20}",2
+test,2931,3,clean,0,{},2
+test,2931,3,rotation,1,"{""angle_degrees"": 15.0}",2
+test,2931,3,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,2931,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 4}",2
+test,5171,6,clean,0,{},2
+test,5171,6,rotation,1,"{""angle_degrees"": -15.0}",2
+test,5171,6,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,5171,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 16}",2
+test,1348,2,clean,0,{},2
+test,1348,2,rotation,1,"{""angle_degrees"": -15.0}",2
+test,1348,2,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,1348,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 18, ""square_size"": 6, ""top"": 7}",2
+test,3436,2,clean,0,{},2
+test,3436,2,rotation,1,"{""angle_degrees"": -15.0}",2
+test,3436,2,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,3436,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 6}",2
+test,5392,2,clean,0,{},2
+test,5392,2,rotation,1,"{""angle_degrees"": 15.0}",2
+test,5392,2,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,5392,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 16}",2
+test,307,7,clean,0,{},2
+test,307,7,rotation,1,"{""angle_degrees"": 15.0}",2
+test,307,7,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,307,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 14}",2
+test,3335,5,clean,0,{},2
+test,3335,5,rotation,1,"{""angle_degrees"": -15.0}",2
+test,3335,5,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,3335,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 17, ""square_size"": 6, ""top"": 4}",2
+test,3340,8,clean,0,{},2
+test,3340,8,rotation,1,"{""angle_degrees"": -15.0}",2
+test,3340,8,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,3340,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 21}",2
+test,1078,4,clean,0,{},2
+test,1078,4,rotation,1,"{""angle_degrees"": -15.0}",2
+test,1078,4,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,1078,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 5, ""square_size"": 6, ""top"": 15}",2
+test,9037,0,clean,0,{},2
+test,9037,0,rotation,1,"{""angle_degrees"": -15.0}",2
+test,9037,0,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,9037,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 8}",2
+test,6471,7,clean,0,{},2
+test,6471,7,rotation,1,"{""angle_degrees"": -15.0}",2
+test,6471,7,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,6471,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 15}",2
+test,6353,7,clean,0,{},2
+test,6353,7,rotation,1,"{""angle_degrees"": 15.0}",2
+test,6353,7,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,6353,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 22}",2
+test,136,0,clean,0,{},2
+test,136,0,rotation,1,"{""angle_degrees"": 15.0}",2
+test,136,0,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,136,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 17, ""square_size"": 6, ""top"": 9}",2
+test,7547,6,clean,0,{},2
+test,7547,6,rotation,1,"{""angle_degrees"": -15.0}",2
+test,7547,6,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,7547,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 11}",2
+test,4743,8,clean,0,{},2
+test,4743,8,rotation,1,"{""angle_degrees"": 15.0}",2
+test,4743,8,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,4743,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 4}",2
+test,8514,0,clean,0,{},2
+test,8514,0,rotation,1,"{""angle_degrees"": -15.0}",2
+test,8514,0,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8514,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 18, ""square_size"": 6, ""top"": 7}",2
+test,4360,5,clean,0,{},2
+test,4360,5,rotation,1,"{""angle_degrees"": 15.0}",2
+test,4360,5,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,4360,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 18}",2
+test,2060,0,clean,0,{},2
+test,2060,0,rotation,1,"{""angle_degrees"": 15.0}",2
+test,2060,0,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,2060,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 7, ""square_size"": 6, ""top"": 10}",2
+test,6963,7,clean,0,{},2
+test,6963,7,rotation,1,"{""angle_degrees"": -15.0}",2
+test,6963,7,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,6963,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 21}",2
+test,4079,0,clean,0,{},2
+test,4079,0,rotation,1,"{""angle_degrees"": -15.0}",2
+test,4079,0,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,4079,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 16, ""square_size"": 6, ""top"": 7}",2
+test,9497,9,clean,0,{},2
+test,9497,9,rotation,1,"{""angle_degrees"": 15.0}",2
+test,9497,9,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,9497,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 11}",2
+test,4890,8,clean,0,{},2
+test,4890,8,rotation,1,"{""angle_degrees"": -15.0}",2
+test,4890,8,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,4890,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 16}",2
+test,661,0,clean,0,{},2
+test,661,0,rotation,1,"{""angle_degrees"": 15.0}",2
+test,661,0,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,661,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 3}",2
+test,1966,7,clean,0,{},2
+test,1966,7,rotation,1,"{""angle_degrees"": -15.0}",2
+test,1966,7,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,1966,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 8}",2
+test,8545,1,clean,0,{},2
+test,8545,1,rotation,1,"{""angle_degrees"": -15.0}",2
+test,8545,1,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8545,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 19}",2
+test,7387,6,clean,0,{},2
+test,7387,6,rotation,1,"{""angle_degrees"": -15.0}",2
+test,7387,6,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,7387,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 10}",2
+test,1474,8,clean,0,{},2
+test,1474,8,rotation,1,"{""angle_degrees"": -15.0}",2
+test,1474,8,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,1474,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 21}",2
+test,9230,0,clean,0,{},2
+test,9230,0,rotation,1,"{""angle_degrees"": 15.0}",2
+test,9230,0,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,9230,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 4}",2
+test,7669,4,clean,0,{},2
+test,7669,4,rotation,1,"{""angle_degrees"": 15.0}",2
+test,7669,4,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,7669,4,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 16, ""square_size"": 6, ""top"": 7}",2
+test,1366,7,clean,0,{},2
+test,1366,7,rotation,1,"{""angle_degrees"": -15.0}",2
+test,1366,7,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,1366,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 17}",2
+test,785,5,clean,0,{},2
+test,785,5,rotation,1,"{""angle_degrees"": 15.0}",2
+test,785,5,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,785,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 2}",2
+test,9182,3,clean,0,{},2
+test,9182,3,rotation,1,"{""angle_degrees"": 15.0}",2
+test,9182,3,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,9182,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 7}",2
+test,4076,5,clean,0,{},2
+test,4076,5,rotation,1,"{""angle_degrees"": 15.0}",2
+test,4076,5,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,4076,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 10}",2
+test,3636,5,clean,0,{},2
+test,3636,5,rotation,1,"{""angle_degrees"": -15.0}",2
+test,3636,5,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,3636,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 21}",2
+test,6899,5,clean,0,{},2
+test,6899,5,rotation,1,"{""angle_degrees"": 15.0}",2
+test,6899,5,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,6899,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 8, ""square_size"": 6, ""top"": 6}",2
+test,5229,5,clean,0,{},2
+test,5229,5,rotation,1,"{""angle_degrees"": 15.0}",2
+test,5229,5,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,5229,5,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 12, ""square_size"": 6, ""top"": 18}",2
+test,278,2,clean,0,{},2
+test,278,2,rotation,1,"{""angle_degrees"": 15.0}",2
+test,278,2,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,278,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 14}",2
+test,7813,9,clean,0,{},2
+test,7813,9,rotation,1,"{""angle_degrees"": 15.0}",2
+test,7813,9,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,7813,9,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 10}",2
+test,3134,2,clean,0,{},2
+test,3134,2,rotation,1,"{""angle_degrees"": 15.0}",2
+test,3134,2,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,3134,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 6, ""square_size"": 6, ""top"": 7}",2
+test,2988,0,clean,0,{},2
+test,2988,0,rotation,1,"{""angle_degrees"": 15.0}",2
+test,2988,0,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,2988,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 19}",2
+test,9923,1,clean,0,{},2
+test,9923,1,rotation,1,"{""angle_degrees"": -15.0}",2
+test,9923,1,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,9923,1,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 11, ""square_size"": 6, ""top"": 8}",2
+test,1536,6,clean,0,{},2
+test,1536,6,rotation,1,"{""angle_degrees"": 15.0}",2
+test,1536,6,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,1536,6,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 5, ""square_size"": 6, ""top"": 10}",2
+test,7710,2,clean,0,{},2
+test,7710,2,rotation,1,"{""angle_degrees"": 15.0}",2
+test,7710,2,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,7710,2,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 9, ""square_size"": 6, ""top"": 12}",2
+test,4393,3,clean,0,{},2
+test,4393,3,rotation,1,"{""angle_degrees"": 15.0}",2
+test,4393,3,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,4393,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 13, ""square_size"": 6, ""top"": 7}",2
+test,4542,0,clean,0,{},2
+test,4542,0,rotation,1,"{""angle_degrees"": 15.0}",2
+test,4542,0,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,4542,0,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 17, ""square_size"": 6, ""top"": 11}",2
+test,8258,8,clean,0,{},2
+test,8258,8,rotation,1,"{""angle_degrees"": 15.0}",2
+test,8258,8,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8258,8,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 10, ""square_size"": 6, ""top"": 18}",2
+test,8375,7,clean,0,{},2
+test,8375,7,rotation,1,"{""angle_degrees"": 15.0}",2
+test,8375,7,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,8375,7,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 3, ""square_size"": 6, ""top"": 12}",2
+test,7215,3,clean,0,{},2
+test,7215,3,rotation,1,"{""angle_degrees"": -15.0}",2
+test,7215,3,gaussian_noise,1,"{""noise_std"": 0.15}",2
+test,7215,3,square_occlusion,1,"{""foreground_threshold"": 0.25, ""left"": 15, ""square_size"": 6, ""top"": 16}",2
