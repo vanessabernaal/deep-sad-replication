@@ -1,0 +1,7 @@
+suite,dataset,network,normal_class,known_outlier_class,n_known_outlier_classes,ratio_known_outlier,seed,n_epochs,ae_n_epochs,status,test_auc,train_time,test_time,ae_test_auc,ae_train_time,ae_test_time,output_directory
+galaxy,galaxy_mnist,cifar10_LeNet,0,1,0,0.0,1,5,5,completed,0.64180904708495,35.385000705718994,4.090476751327515,0.7148586896641922,63.73491644859314,6.286985158920288,results/experiments/galaxy/normal-0/ratio-00pct/seed-1
+galaxy,galaxy_mnist,cifar10_LeNet,0,1,0,0.0,2,5,5,completed,0.6471277533156043,37.85592770576477,4.187543869018555,0.6918122837541664,64.72699451446533,6.211321830749512,results/experiments/galaxy/normal-0/ratio-00pct/seed-2
+galaxy,galaxy_mnist,cifar10_LeNet,0,1,0,0.0,3,5,5,completed,0.6488966921240609,34.9649384021759,3.9675872325897217,0.7051684983572253,65.10932612419128,6.151557922363281,results/experiments/galaxy/normal-0/ratio-00pct/seed-3
+galaxy,galaxy_mnist,cifar10_LeNet,0,1,1,0.05,1,5,5,completed,0.7360516070392933,37.72861981391907,4.09743070602417,0.6904779833833365,69.17306995391846,6.242681264877319,results/experiments/galaxy/normal-0/ratio-05pct/seed-1
+galaxy,galaxy_mnist,cifar10_LeNet,0,1,1,0.05,2,5,5,completed,0.7248884009665091,37.65415024757385,4.017959356307983,0.6978087088860442,69.09701895713806,6.242927074432373,results/experiments/galaxy/normal-0/ratio-05pct/seed-2
+galaxy,galaxy_mnist,cifar10_LeNet,0,1,1,0.05,3,5,5,completed,0.730088209144317,39.47140431404114,4.078340530395508,0.7050337472306663,69.26267433166504,6.180944919586182,results/experiments/galaxy/normal-0/ratio-05pct/seed-3
