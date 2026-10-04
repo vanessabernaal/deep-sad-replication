@@ -14,7 +14,7 @@ from datasets.main import load_dataset
 # Settings
 ################################################################################
 @click.command()
-@click.argument('dataset_name', type=click.Choice(['mnist', 'fmnist', 'cifar10', 'arrhythmia', 'cardio', 'satellite',
+@click.argument('dataset_name', type=click.Choice(['mnist', 'fmnist', 'cifar10', 'galaxy_mnist', 'arrhythmia', 'cardio', 'satellite',
                                                    'satimage-2', 'shuttle', 'thyroid']))
 @click.argument('net_name', type=click.Choice(['mnist_LeNet', 'fmnist_LeNet', 'cifar10_LeNet', 'arrhythmia_mlp',
                                                'cardio_mlp', 'satellite_mlp', 'satimage-2_mlp', 'shuttle_mlp',
@@ -39,7 +39,7 @@ from datasets.main import load_dataset
 @click.option('--lr', type=float, default=0.001,
               help='Initial learning rate for Deep SAD network training. Default=0.001')
 @click.option('--n_epochs', type=int, default=50, help='Number of epochs to train.')
-@click.option('--lr_milestone', type=int, default=[0], multiple=True,
+@click.option('--lr_milestone', type=int, default=[], multiple=True,
               help='Lr scheduler milestones at which lr is multiplied by 0.1. Can be multiple and must be increasing.')
 @click.option('--batch_size', type=int, default=128, help='Batch size for mini-batch training.')
 @click.option('--weight_decay', type=float, default=1e-6,
@@ -51,7 +51,7 @@ from datasets.main import load_dataset
 @click.option('--ae_lr', type=float, default=0.001,
               help='Initial learning rate for autoencoder pretraining. Default=0.001')
 @click.option('--ae_n_epochs', type=int, default=100, help='Number of epochs to train autoencoder.')
-@click.option('--ae_lr_milestone', type=int, default=[0], multiple=True,
+@click.option('--ae_lr_milestone', type=int, default=[], multiple=True,
               help='Lr scheduler milestones at which lr is multiplied by 0.1. Can be multiple and must be increasing.')
 @click.option('--ae_batch_size', type=int, default=128, help='Batch size for mini-batch autoencoder training.')
 @click.option('--ae_weight_decay', type=float, default=1e-6,

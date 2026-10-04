@@ -1,0 +1,61 @@
+2026-10-04 04:03:59,653 - root - INFO - Log file is results/smoke-galaxy-mnist-v2/log.txt
+2026-10-04 04:03:59,654 - root - INFO - Data path is data
+2026-10-04 04:03:59,654 - root - INFO - Export path is results/smoke-galaxy-mnist-v2
+2026-10-04 04:03:59,654 - root - INFO - Dataset: galaxy_mnist
+2026-10-04 04:03:59,654 - root - INFO - Normal class: 0
+2026-10-04 04:03:59,654 - root - INFO - Ratio of labeled normal train samples: 0.00
+2026-10-04 04:03:59,654 - root - INFO - Ratio of labeled anomalous samples: 0.05
+2026-10-04 04:03:59,654 - root - INFO - Pollution ratio of unlabeled train data: 0.00
+2026-10-04 04:03:59,654 - root - INFO - Known anomaly class: 1
+2026-10-04 04:03:59,654 - root - INFO - Network: cifar10_LeNet
+2026-10-04 04:03:59,654 - root - INFO - Eta-parameter: 1.00
+2026-10-04 04:03:59,656 - root - INFO - Set seed to 1.
+2026-10-04 04:03:59,657 - root - INFO - Computation device: cpu
+2026-10-04 04:03:59,657 - root - INFO - Number of threads: 0
+2026-10-04 04:03:59,657 - root - INFO - Number of dataloader workers: 0
+2026-10-04 04:03:59,658 - root - INFO - Setting up galaxy_mnist dataset
+2026-10-04 04:03:59,658 - root - INFO - Checking integrity of resources
+2026-10-04 04:03:59,858 - root - INFO - Resource status: <zip object at 0x7cc2f9116500>
+2026-10-04 04:03:59,858 - root - INFO - All resources ready: True
+2026-10-04 04:03:59,858 - root - INFO - Images unpacked: False (data/GalaxyMNIST/images, ['images/92abc34c-824c-4d46-a79c-cc28a768149f.jpg', 'images/a4bd154c-327c-4064-90d2-7d3d2bd045dc.jpg'])
+2026-10-04 04:03:59,859 - root - INFO - Downloading https://dl.dropboxusercontent.com/s/6xlym0ney5q9aec14vvy1/galaxy_mnist_train_catalog.parquet?rlkey=fc5knqscwk2h6r4z5d3156vzr&dl=0
+2026-10-04 04:03:59,859 - root - INFO - Downloading non-archive file - galaxy_mnist_train_catalog.parquet
+2026-10-04 04:03:59,860 - root - INFO - Downloading https://dl.dropboxusercontent.com/s/9assxy247i1nq8wjy7o0a/galaxy_mnist_test_catalog.parquet?rlkey=y1ns24xw0tcyntodi61rv14fu&dl=0
+2026-10-04 04:03:59,860 - root - INFO - Downloading non-archive file - galaxy_mnist_test_catalog.parquet
+2026-10-04 04:03:59,861 - root - INFO - Downloading https://dl.dropboxusercontent.com/s/lj89307kjx5plme9f66js/galaxy_mnist_images.tar.gz?rlkey=gvlwx2rl3hqpo3gplb9zlqrz0
+2026-10-04 04:04:05,277 - root - INFO - galaxy_mnist dataset ready
+2026-10-04 04:04:05,288 - root - INFO - Setting up galaxy_mnist dataset
+2026-10-04 04:04:05,335 - root - INFO - galaxy_mnist dataset ready
+2026-10-04 04:04:05,351 - root - INFO - Pretraining: True
+2026-10-04 04:04:05,352 - root - INFO - Pretraining optimizer: adam
+2026-10-04 04:04:05,352 - root - INFO - Pretraining learning rate: 0.001
+2026-10-04 04:04:05,354 - root - INFO - Pretraining epochs: 1
+2026-10-04 04:04:05,354 - root - INFO - Pretraining learning rate scheduler milestones: ()
+2026-10-04 04:04:05,354 - root - INFO - Pretraining batch size: 128
+2026-10-04 04:04:05,354 - root - INFO - Pretraining weight decay: 1e-06
+2026-10-04 04:04:05,371 - root - INFO - Starting pretraining...
+2026-10-04 04:04:19,822 - root - INFO - | Epoch: 001/001 | Train Time: 14.450s | Train Loss: 0.037957 |
+2026-10-04 04:04:19,822 - root - INFO - Pretraining Time: 14.451s
+2026-10-04 04:04:19,822 - root - INFO - Finished pretraining.
+2026-10-04 04:04:19,823 - root - INFO - Testing autoencoder...
+2026-10-04 04:04:26,063 - root - INFO - Test Loss: 0.006146
+2026-10-04 04:04:26,063 - root - INFO - Test AUC: 60.62%
+2026-10-04 04:04:26,063 - root - INFO - Test Time: 6.238s
+2026-10-04 04:04:26,063 - root - INFO - Finished testing autoencoder.
+2026-10-04 04:04:26,064 - root - INFO - Training optimizer: adam
+2026-10-04 04:04:26,065 - root - INFO - Training learning rate: 0.001
+2026-10-04 04:04:26,065 - root - INFO - Training epochs: 1
+2026-10-04 04:04:26,065 - root - INFO - Training learning rate scheduler milestones: ()
+2026-10-04 04:04:26,065 - root - INFO - Training batch size: 128
+2026-10-04 04:04:26,065 - root - INFO - Training weight decay: 1e-06
+2026-10-04 04:04:26,065 - root - INFO - Initializing center c...
+2026-10-04 04:04:30,060 - root - INFO - Center c initialized.
+2026-10-04 04:04:30,061 - root - INFO - Starting training...
+2026-10-04 04:04:37,706 - root - INFO - | Epoch: 001/001 | Train Time: 7.645s | Train Loss: 44.243391 |
+2026-10-04 04:04:37,706 - root - INFO - Training Time: 7.645s
+2026-10-04 04:04:37,706 - root - INFO - Finished training.
+2026-10-04 04:04:37,707 - root - INFO - Starting testing...
+2026-10-04 04:04:41,721 - root - INFO - Test Loss: 3.739882
+2026-10-04 04:04:41,721 - root - INFO - Test AUC: 60.57%
+2026-10-04 04:04:41,722 - root - INFO - Test Time: 4.012s
+2026-10-04 04:04:41,722 - root - INFO - Finished testing.
