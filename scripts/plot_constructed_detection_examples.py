@@ -116,10 +116,20 @@ def main():
             )
             axes[row, column].axis("off")
 
-        axes[row, 0].set_ylabel(
+    row_positions = [0.73, 0.45, 0.17]
+
+    for position, (group_name, _) in zip(
+        row_positions,
+        groups,
+    ):
+        fig.text(
+            0.035,
+            position,
             group_name,
+            ha="center",
+            va="center",
+            rotation=90,
             fontsize=10,
-            labelpad=18,
         )
 
     fig.suptitle(
@@ -128,7 +138,7 @@ def main():
         fontsize=14,
     )
 
-    fig.tight_layout(rect=[0, 0, 1, 0.94])
+    fig.tight_layout(rect=[0.10, 0, 1, 0.94])
 
     OUTPUT_PATH.parent.mkdir(
         parents=True,
