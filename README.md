@@ -1,4 +1,34 @@
 # Deep SAD: A Method for Deep Semi-Supervised Anomaly Detection
+
+> **Replication and extension project:** This fork is being developed for the
+> COMP8240 Applications of Data Science project at Macquarie University. It
+> updates the original implementation for a modern Python environment and
+> extends it with GalaxyMNIST and a programmatically constructed corrupted
+> MNIST dataset.
+
+## Project Replication and Extensions
+
+The current project evaluates whether limited labelled anomalies improve Deep
+SAD under three conditions:
+
+1. a reduced replication of the original MNIST experiments;
+2. a new scientific image domain using GalaxyMNIST;
+3. controlled MNIST corruptions using rotation, Gaussian noise, and square
+   occlusion.
+
+The repository includes a reproducible Conda environment, dataset-generation
+scripts, additional dataset loaders, a resumable experiment runner, pilot
+results, and qualitative detection examples.
+
+See the [project update](reports/project-update/README.md) for the current
+experimental status, results, evidence, and next steps.
+
+For this fork, use `environment.yml` instead of the original legacy
+`requirements.txt`. The remainder of this README preserves the documentation
+from the original authors.
+
+---
+
 This repository provides a [PyTorch](https://pytorch.org/) implementation of the *Deep SAD* method presented in our ICLR 2020 paper ”Deep Semi-Supervised Anomaly Detection”.
 
 
