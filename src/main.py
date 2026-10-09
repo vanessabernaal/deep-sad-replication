@@ -60,6 +60,18 @@ from datasets.main import load_dataset
               help='Number of threads used for parallelizing CPU operations. 0 means that all resources are used.')
 @click.option('--n_jobs_dataloader', type=int, default=0,
               help='Number of workers for data loading. 0 means that the data will be loaded in the main process.')
+@click.option(
+    '--corruption',
+    type=click.Choice([
+        'clean',
+        'rotation',
+        'gaussian_noise',
+        'square_occlusion',
+    ]),
+    default='rotation',
+    show_default=True,
+    help='Corruption condition used by constructed_mnist.',
+)
 @click.option('--normal_class', type=int, default=0,
               help='Specify the normal class of the dataset (all other classes are considered anomalous).')
 @click.option('--known_outlier_class', type=int, default=1,
@@ -73,7 +85,7 @@ def main(dataset_name, net_name, xp_path, data_path, load_config, load_model, et
          ratio_known_normal, ratio_known_outlier, ratio_pollution, device, seed,
          optimizer_name, lr, n_epochs, lr_milestone, batch_size, weight_decay,
          pretrain, ae_optimizer_name, ae_lr, ae_n_epochs, ae_lr_milestone, ae_batch_size, ae_weight_decay,
-         num_threads, n_jobs_dataloader, normal_class, known_outlier_class, n_known_outlier_classes):
+        num_threads, n_jobs_dataloader, corruption, normal_class, known_outlier_class, n_known_outlier_classes):
     """
     Deep SAD, a method for deep semi-supervised anomaly detection.
 
@@ -104,6 +116,8 @@ def main(dataset_name, net_name, xp_path, data_path, load_config, load_model, et
 
     # Print experimental setup
     logger.info('Dataset: %s' % dataset_name)
+    if dataset_name == 'constructed_mnist':
+        logger.info('Corruption condition: %s' % corruption)
     logger.info('Normal class: %d' % normal_class)
     logger.info('Ratio of labeled normal train samples: %.2f' % ratio_known_normal)
     logger.info('Ratio of labeled anomalous samples: %.2f' % ratio_known_outlier)
@@ -142,9 +156,20 @@ def main(dataset_name, net_name, xp_path, data_path, load_config, load_model, et
     logger.info('Number of dataloader workers: %d' % n_jobs_dataloader)
 
     # Load data
-    dataset = load_dataset(dataset_name, data_path, normal_class, known_outlier_class, n_known_outlier_classes,
-                           ratio_known_normal, ratio_known_outlier, ratio_pollution,
-                           random_state=np.random.RandomState(cfg.settings['seed']))
+    dataset = load_dataset(
+        dataset_name,
+        data_path,
+        normal_class,
+        known_outlier_class,
+        n_known_outlier_classes,
+        ratio_known_normal,
+        ratio_known_outlier,
+        ratio_pollution,
+        random_state=np.random.RandomState(
+            cfg.settings['seed']
+        ),
+        corruption=corruption,
+    )
     # Log random sample of known anomaly classes if more than 1 class
     if n_known_outlier_classes > 1:
         logger.info('Known anomaly classes: %s' % (dataset.known_outlier_classes,))

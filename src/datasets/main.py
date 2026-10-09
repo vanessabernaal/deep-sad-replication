@@ -6,9 +6,18 @@ from .constructed_mnist import ConstructedMNIST_Dataset
 from .odds import ODDSADDataset
 
 
-def load_dataset(dataset_name, data_path, normal_class, known_outlier_class, n_known_outlier_classes: int = 0,
-                 ratio_known_normal: float = 0.0, ratio_known_outlier: float = 0.0, ratio_pollution: float = 0.0,
-                 random_state=None):
+def load_dataset(
+    dataset_name,
+    data_path,
+    normal_class,
+    known_outlier_class,
+    n_known_outlier_classes: int = 0,
+    ratio_known_normal: float = 0.0,
+    ratio_known_outlier: float = 0.0,
+    ratio_pollution: float = 0.0,
+    random_state=None,
+    corruption: str = "rotation",
+):
     """Loads the dataset."""
 
     implemented_datasets = (
@@ -35,7 +44,9 @@ def load_dataset(dataset_name, data_path, normal_class, known_outlier_class, n_k
                                 n_known_outlier_classes=n_known_outlier_classes,
                                 ratio_known_normal=ratio_known_normal,
                                 ratio_known_outlier=ratio_known_outlier,
-                                ratio_pollution=ratio_pollution)
+                                ratio_pollution=ratio_pollution,
+                                corruption=corruption,
+                                )
 
     if dataset_name == 'fmnist':
         dataset = FashionMNIST_Dataset(root=data_path,
@@ -74,6 +85,7 @@ def load_dataset(dataset_name, data_path, normal_class, known_outlier_class, n_k
             ratio_known_normal=ratio_known_normal,
             ratio_known_outlier=ratio_known_outlier,
             ratio_pollution=ratio_pollution,
+            corruption=corruption,
         )
 
     if dataset_name in ('arrhythmia', 'cardio', 'satellite', 'satimage-2', 'shuttle', 'thyroid'):

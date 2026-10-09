@@ -218,7 +218,6 @@ def generate_split(dataset, split_name, indices, severity, seed):
 
     generated_images = []
     digit_labels = []
-    anomaly_targets = []
     metadata = []
 
     for source_index in indices.tolist():
@@ -268,9 +267,6 @@ def generate_split(dataset, split_name, indices, severity, seed):
         for corruption, transformed_image, parameters in variants:
             generated_images.append(transformed_image)
             digit_labels.append(digit_label)
-            anomaly_targets.append(
-                int(corruption != "clean")
-            )
 
             metadata.append(
                 {
@@ -295,10 +291,6 @@ def generate_split(dataset, split_name, indices, severity, seed):
             digit_labels,
             dtype=torch.long,
         ),
-        "anomaly_targets": torch.tensor(
-            anomaly_targets,
-            dtype=torch.long,
-        ),
         "metadata": metadata,
     }
 
@@ -317,7 +309,6 @@ def validate_payload(payload, expected_sources):
         28,
     )
     assert len(payload["digit_labels"]) == expected_sources * 4
-    assert len(payload["anomaly_targets"]) == expected_sources * 4
     assert len(metadata) == expected_sources * 4
 
     assert torch.isfinite(images).all()

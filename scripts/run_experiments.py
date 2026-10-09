@@ -8,6 +8,15 @@ from pathlib import Path
 
 
 EXPERIMENT_SUITES = {
+    "constructed_clean": {
+        "dataset": "constructed_mnist",
+        "network": "mnist_LeNet",
+        "normal_classes": [0],
+        "known_outlier_class": 1,
+        "corruptions": ["clean"],
+        "labelled_anomaly_ratios": [0.0, 0.05],
+        "seeds": [1, 2, 3],
+    },
     "mnist": {
         "dataset": "mnist",
         "network": "mnist_LeNet",
@@ -29,7 +38,12 @@ EXPERIMENT_SUITES = {
         "dataset": "constructed_mnist",
         "network": "mnist_LeNet",
         "normal_classes": [0],
-        "known_outlier_classes": [1, 2, 3],
+        "known_outlier_class": 1,
+        "corruptions": [
+            "rotation",
+            "gaussian_noise",
+            "square_occlusion",
+        ],
         "labelled_anomaly_ratios": [0.0, 0.05],
         "seeds": [1, 2, 3],
     },
@@ -42,7 +56,7 @@ def parse_args():
     )
     parser.add_argument(
         "--suite",
-        choices=["mnist", "galaxy", "constructed", "all"],
+        choices=["mnist", "galaxy", "constructed", "constructed_clean", "all"],
         required=True,
         help="Experiment suite to execute.",
     )
@@ -106,15 +120,11 @@ def selected_suites(suite_name):
 
 def build_experiments(suite_name):
     suite = EXPERIMENT_SUITES[suite_name]
+    corruptions = suite.get("corruptions", [None])
 
-    known_outlier_classes = suite.get("known_outlier_classes")
-
-    if known_outlier_classes is None:
-        known_outlier_classes = [suite["known_outlier_class"]]
-
-    for normal_class, known_outlier_class, ratio, seed in product(
+    for normal_class, corruption, ratio, seed in product(
         suite["normal_classes"],
-        known_outlier_classes,
+        corruptions,
         suite["labelled_anomaly_ratios"],
         suite["seeds"],
     ):
@@ -123,37 +133,49 @@ def build_experiments(suite_name):
             "dataset": suite["dataset"],
             "network": suite["network"],
             "normal_class": normal_class,
-            "known_outlier_class": known_outlier_class,
+            "known_outlier_class": suite[
+                "known_outlier_class"
+            ],
+            "corruption": corruption,
             "ratio_known_outlier": ratio,
-            "n_known_outlier_classes": 0 if ratio == 0.0 else 1,
+            "n_known_outlier_classes": (
+                0 if ratio == 0.0 else 1
+            ),
             "seed": seed,
         }
 
 
 def experiment_directory(results_root, experiment):
-    directory = results_root / experiment["suite"]
-
     if experiment["suite"] == "constructed":
-        corruption_names = {
-            1: "rotation",
-            2: "gaussian-noise",
-            3: "square-occlusion",
-        }
-        corruption_name = corruption_names[
-            experiment["known_outlier_class"]
-        ]
-        directory = directory / f"corruption-{corruption_name}"
+        directory = (
+            results_root
+            / "constructed-robustness"
+            / (
+                "corruption-"
+                + experiment["corruption"].replace("_", "-")
+            )
+        )
+    else:
+        directory = (
+            results_root
+            / experiment["suite"]
+        )
 
     return (
         directory
         / f"normal-{experiment['normal_class']}"
-        / f"ratio-{ratio_name(experiment['ratio_known_outlier'])}"
+        / (
+            "ratio-"
+            + ratio_name(
+                experiment["ratio_known_outlier"]
+            )
+        )
         / f"seed-{experiment['seed']}"
     )
 
 
 def build_command(args, experiment, output_directory):
-    return [
+    command = [
         sys.executable,
         "src/main.py",
         experiment["dataset"],
@@ -183,6 +205,13 @@ def build_command(args, experiment, output_directory):
         "--ae_batch_size",
         str(args.batch_size),
     ]
+    if experiment["corruption"] is not None:
+        command.extend([
+            "--corruption",
+            experiment["corruption"],
+        ])
+
+    return command
 
 
 def read_result(output_directory, filename):
@@ -206,6 +235,7 @@ def write_summary(results_root, records, suite_name):
         "suite",
         "dataset",
         "network",
+        "corruption",
         "normal_class",
         "known_outlier_class",
         "n_known_outlier_classes",

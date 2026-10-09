@@ -13,7 +13,8 @@ from datasets.main import load_dataset
 
 RESULTS_PATH = (
     PROJECT_ROOT
-    / "results/experiments/constructed/"
+    / "results/experiments-50ep-ae100/"
+    / "constructed-robustness/"
     / "corruption-rotation/normal-0/"
     / "ratio-05pct/seed-1/results.json"
 )
@@ -35,6 +36,7 @@ def main():
         ratio_known_normal=0.0,
         ratio_known_outlier=0.05,
         ratio_pollution=0.0,
+        corruption="rotation",
     )
 
     with RESULTS_PATH.open("r", encoding="utf-8") as file:
@@ -77,15 +79,15 @@ def main():
 
     groups = [
         (
-            "Detected anomalies\n(highest anomaly scores)",
+            "Anomalous digits\n(highest scores)",
             detected_anomalies,
         ),
         (
-            "Missed anomalies\n(lowest anomaly scores)",
+            "Anomalous digits\n(lowest scores)",
             missed_anomalies,
         ),
         (
-            "Incorrectly flagged clean\n(highest clean scores)",
+            "Normal digit 0\n(highest scores)",
             incorrectly_flagged,
         ),
     ]

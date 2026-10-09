@@ -5,126 +5,148 @@ import numpy as np
 import pandas as pd
 
 
-RESULTS_PATH = Path(
-    "results/experiments/constructed_experiment_summary.csv"
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+RESULTS_ROOT = (
+    PROJECT_ROOT / "results/experiments-50ep-ae100"
 )
-OUTPUT_PATH = Path(
-    "reports/project-update/figures/"
-    "constructed_mnist_pilot_auc.png"
+OUTPUT_ROOT = (
+    PROJECT_ROOT / "reports/project-update/figures"
 )
 
-CORRUPTION_NAMES = {
-    1: "Rotation",
-    2: "Gaussian noise",
-    3: "Square occlusion",
+CONDITION_NAMES = {
+    "clean": "Clean",
+    "rotation": "Rotation",
+    "gaussian_noise": "Gaussian noise",
+    "square_occlusion": "Square occlusion",
 }
 
 
 def main():
-    results = pd.read_csv(RESULTS_PATH)
-
-    results["corruption"] = results[
-        "known_outlier_class"
-    ].map(CORRUPTION_NAMES)
-
-    results["test_auc_percent"] = (
-        results["test_auc"] * 100
+    # Combine the clean control and corruption experiments.
+    results = pd.concat(
+        [
+            pd.read_csv(
+                RESULTS_ROOT
+                / "constructed_clean_experiment_summary.csv"
+            ),
+            pd.read_csv(
+                RESULTS_ROOT
+                / "constructed_experiment_summary.csv"
+            ),
+        ],
+        ignore_index=True,
     )
+
+    # Check that all 24 runs belong to the intended configuration.
+    assert len(results) == 24, "Expected 24 runs."
+    assert results["status"].eq("completed").all()
+    assert results["n_epochs"].eq(50).all()
+    assert results["ae_n_epochs"].eq(100).all()
+    assert results["normal_class"].eq(0).all()
+    assert results["known_outlier_class"].eq(1).all()
+    assert set(results["corruption"]) == set(CONDITION_NAMES)
+    assert set(results["ratio_known_outlier"]) == {0.0, 0.05}
+
+    for _, group in results.groupby(
+        ["corruption", "ratio_known_outlier"]
+    ):
+        assert len(group) == 3
+        assert set(group["seed"]) == {1, 2, 3}
+
+    results["test_auc_percent"] = results["test_auc"] * 100
 
     summary = (
         results.groupby(
             ["corruption", "ratio_known_outlier"]
         )["test_auc_percent"]
-        .agg(["mean", "std"])
+        .agg(["mean", "std", "count"])
         .reset_index()
     )
 
-    corruption_order = [
-        "Rotation",
-        "Gaussian noise",
-        "Square occlusion",
-    ]
-    ratios = [0.0, 0.05]
-    ratio_labels = ["0% labelled anomalies", "5% labelled anomalies"]
-    colours = ["#4C78A8", "#F58518"]
+    OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
 
-    x_positions = np.arange(len(corruption_order))
-    bar_width = 0.34
+    summary_path = (
+        OUTPUT_ROOT / "constructed_robustness_auc_summary.csv"
+    )
+    summary.to_csv(summary_path, index=False)
+
+    order = list(CONDITION_NAMES)
+    positions = np.arange(len(order))
+    offsets = [-0.12, 0.12]
 
     fig, ax = plt.subplots(figsize=(9, 5.5))
 
-    for index, (ratio, label, colour) in enumerate(
-        zip(ratios, ratio_labels, colours)
+    # Points and error bars show means and sample standard deviations.
+    for ratio, offset, colour, label in zip(
+        [0.0, 0.05],
+        offsets,
+        ["#4C78A8", "#F58518"],
+        ["0% labelled anomalies", "5% labelled anomalies"],
     ):
         condition = (
             summary[
                 summary["ratio_known_outlier"] == ratio
             ]
             .set_index("corruption")
-            .reindex(corruption_order)
+            .reindex(order)
         )
 
-        positions = (
-            x_positions
-            + (index - 0.5) * bar_width
-        )
-
-        bars = ax.bar(
-            positions,
+        ax.errorbar(
+            positions + offset,
             condition["mean"],
-            width=bar_width,
             yerr=condition["std"],
+            fmt="o",
+            markersize=7,
             capsize=5,
-            label=label,
             color=colour,
-            alpha=0.9,
+            label=label,
         )
-
-        for bar, value in zip(bars, condition["mean"]):
-            ax.text(
-                bar.get_x() + bar.get_width() / 2,
-                bar.get_height() + 1.2,
-                f"{value:.1f}",
-                ha="center",
-                va="bottom",
-                fontsize=9,
-            )
 
     ax.axhline(
         50,
-        color="black",
+        color="gray",
         linestyle="--",
         linewidth=1,
-        alpha=0.7,
         label="Chance level",
     )
-
     ax.set_title(
-        "Constructed MNIST pilot: Deep SAD detection performance\n"
-        "5 training epochs; mean ± SD across 3 seeds"
+        "Deep SAD on clean and corrupted MNIST\n"
+        "50 training epochs; 100 pretraining epochs"
     )
-    ax.set_xlabel("Corruption type")
     ax.set_ylabel("Test ROC-AUC (%)")
-    ax.set_xticks(x_positions)
-    ax.set_xticklabels(corruption_order)
-    ax.set_ylim(20, 75)
+    ax.set_xlabel("Image condition")
+    ax.set_xticks(positions)
+    ax.set_xticklabels(
+        [CONDITION_NAMES[name] for name in order]
+    )
+    ax.set_ylim(45, 101)
     ax.grid(axis="y", alpha=0.25)
-    ax.legend(frameon=False, loc="lower right")
-
-    fig.tight_layout()
-
-    OUTPUT_PATH.parent.mkdir(
-        parents=True,
-        exist_ok=True,
+    ax.legend(
+        frameon=True,
+        facecolor="white",
+        framealpha=1,
+        loc="lower left",
     )
-    fig.savefig(
-        OUTPUT_PATH,
-        dpi=300,
-        bbox_inches="tight",
+
+    fig.text(
+        0.5,
+        0.015,
+        "Mean ± sample SD across 3 seeds. "
+        "Each model is trained and tested in the same image condition.",
+        ha="center",
+        fontsize=9,
     )
+    fig.tight_layout(rect=[0, 0.05, 1, 1])
+
+    figure_path = (
+        OUTPUT_ROOT / "constructed_robustness_auc.png"
+    )
+    fig.savefig(figure_path, dpi=300, bbox_inches="tight")
     plt.close(fig)
 
-    print(f"Figure saved to: {OUTPUT_PATH.resolve()}")
+    print(summary.to_string(index=False))
+    print(f"\nTable saved to: {summary_path}")
+    print(f"Figure saved to: {figure_path}")
 
 
 if __name__ == "__main__":
