@@ -45,7 +45,6 @@ def load_dataset(
                                 ratio_known_normal=ratio_known_normal,
                                 ratio_known_outlier=ratio_known_outlier,
                                 ratio_pollution=ratio_pollution,
-                                corruption=corruption,
                                 )
 
     if dataset_name == 'fmnist':
