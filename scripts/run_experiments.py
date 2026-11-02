@@ -114,7 +114,12 @@ def ratio_name(ratio):
 
 def selected_suites(suite_name):
     if suite_name == "all":
-        return ["mnist", "galaxy", "constructed"]
+        return [
+            "mnist",
+            "galaxy",
+            "constructed",
+            "constructed_clean",
+        ]
     return [suite_name]
 
 
@@ -260,10 +265,75 @@ def write_summary(results_root, records, suite_name):
 
     print(f"\nSummary saved to: {summary_path}")
 
+def validate_saved_run(args, experiment, output_directory):
+    """Check that saved results match the requested configuration."""
+    config_path = output_directory / "config.json"
+
+    if not config_path.exists():
+        raise ValueError(
+            f"Missing configuration: {config_path}. "
+            "Use a new results directory."
+        )
+
+    config = read_result(output_directory, "config.json")
+
+    expected = {
+        "dataset_name": experiment["dataset"],
+        "net_name": experiment["network"],
+        "normal_class": experiment["normal_class"],
+        "known_outlier_class": experiment["known_outlier_class"],
+        "n_known_outlier_classes": experiment["n_known_outlier_classes"],
+        "ratio_known_outlier": experiment["ratio_known_outlier"],
+        "ratio_known_normal": 0.0,
+        "ratio_pollution": 0.0,
+        "seed": experiment["seed"],
+        "n_epochs": args.n_epochs,
+        "ae_n_epochs": args.ae_n_epochs,
+        "batch_size": args.batch_size,
+        "ae_batch_size": args.batch_size,
+        "pretrain": True,
+    }
+
+    if experiment["corruption"] is not None:
+        expected["corruption"] = experiment["corruption"]
+
+    mismatches = [
+        f"{key}: saved={config.get(key)!r}, requested={value!r}"
+        for key, value in expected.items()
+        if config.get(key) != value
+    ]
+
+    if mismatches:
+        raise ValueError(
+            f"Configuration mismatch in {output_directory}:\n"
+            + "\n".join(mismatches)
+            + "\nUse a different --results-root to preserve this run."
+        )
+
+    results = read_result(output_directory, "results.json")
+    ae_results = read_result(output_directory, "ae_results.json")
+
+    if results.get("test_auc") is None:
+        raise ValueError(
+            f"Missing Deep SAD AUC in {output_directory}."
+        )
+
+    if ae_results.get("test_auc") is None:
+        raise ValueError(
+            f"Missing autoencoder AUC in {output_directory}."
+        )
+
+    return config, results, ae_results
+
 
 def main():
     args = parse_args()
     records = []
+
+    if min(args.n_epochs, args.ae_n_epochs, args.batch_size) <= 0:
+        raise ValueError(
+            "Epoch counts and batch size must be positive."
+        )
 
     for suite_name in selected_suites(args.suite):
         experiments = list(build_experiments(suite_name))
@@ -278,62 +348,68 @@ def main():
                 args.results_root,
                 experiment,
             )
+            command = build_command(
+                args,
+                experiment,
+                output_directory,
+            )
+            prefix = f"[{run_number}/{len(experiments)}]"
+
+            # Dry runs only print commands; they never write summaries.
+            if args.dry_run:
+                print(f"{prefix} " + " ".join(command))
+                continue
+
             results_path = output_directory / "results.json"
 
             if results_path.exists() and not args.force:
+                config, results, ae_results = validate_saved_run(
+                    args,
+                    experiment,
+                    output_directory,
+                )
                 status = "skipped_complete"
                 print(
-                    f"[{run_number}/{len(experiments)}] "
-                    f"Skipping completed run: {output_directory}"
-                )
-            elif args.dry_run:
-                status = "dry_run"
-                command = build_command(
-                    args,
-                    experiment,
-                    output_directory,
-                )
-                print(
-                    f"[{run_number}/{len(experiments)}] "
-                    + " ".join(command)
+                    f"{prefix} Reusing verified run: "
+                    f"{output_directory}"
                 )
             else:
-                status = "completed"
-                output_directory.mkdir(parents=True, exist_ok=True)
-
-                command = build_command(
-                    args,
-                    experiment,
-                    output_directory,
+                output_directory.mkdir(
+                    parents=True,
+                    exist_ok=True,
                 )
 
                 print(
-                    f"\n[{run_number}/{len(experiments)}] "
-                    f"Running: {output_directory}"
+                    f"\n{prefix} Running: {output_directory}"
                 )
                 subprocess.run(command, check=True)
 
-            results = read_result(output_directory, "results.json")
-            ae_results = read_result(
-                output_directory,
-                "ae_results.json",
-            )
+                config, results, ae_results = validate_saved_run(
+                    args,
+                    experiment,
+                    output_directory,
+                )
+                status = "completed"
 
             records.append(
                 {
                     **experiment,
-                    "n_epochs": args.n_epochs,
-                    "ae_n_epochs": args.ae_n_epochs,
+                    "n_epochs": config["n_epochs"],
+                    "ae_n_epochs": config["ae_n_epochs"],
                     "status": status,
-                    "test_auc": results.get("test_auc"),
+                    "test_auc": results["test_auc"],
                     "train_time": results.get("train_time"),
                     "test_time": results.get("test_time"),
-                    "ae_test_auc": ae_results.get("test_auc"),
+                    "ae_test_auc": ae_results["test_auc"],
                     "ae_train_time": ae_results.get("train_time"),
                     "ae_test_time": ae_results.get("test_time"),
                     "output_directory": str(output_directory),
                 }
             )
+
+    if args.dry_run:
+        print("\nDry run completed. No files were written.")
+        return
 
     write_summary(
         args.results_root,
