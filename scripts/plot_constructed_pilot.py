@@ -7,10 +7,10 @@ import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RESULTS_ROOT = (
-    PROJECT_ROOT / "results/experiments-50ep-ae100"
+    PROJECT_ROOT / "results/final-full-batches"
 )
 OUTPUT_ROOT = (
-    PROJECT_ROOT / "reports/project-update/figures"
+    PROJECT_ROOT / "reports/final-report/figures"
 )
 
 CONDITION_NAMES = {
@@ -39,7 +39,8 @@ def main():
 
     # Check that all 24 runs belong to the intended configuration.
     assert len(results) == 24, "Expected 24 runs."
-    assert results["status"].eq("completed").all()
+    assert results["status"].isin(["completed", "skipped_complete"]).all()
+    assert results["test_auc"].between(0, 1).all()
     assert results["n_epochs"].eq(50).all()
     assert results["ae_n_epochs"].eq(100).all()
     assert results["normal_class"].eq(0).all()

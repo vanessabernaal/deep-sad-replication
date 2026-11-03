@@ -13,7 +13,7 @@ from datasets.main import load_dataset
 
 RESULTS_PATH = (
     PROJECT_ROOT
-    / "results/experiments-50ep-ae100/"
+    / "results/final-full-batches/"
     / "constructed-robustness/"
     / "corruption-rotation/normal-0/"
     / "ratio-05pct/seed-1/results.json"
@@ -21,7 +21,7 @@ RESULTS_PATH = (
 
 OUTPUT_PATH = (
     PROJECT_ROOT
-    / "reports/project-update/figures/"
+    / "reports/final-report/figures/"
     / "constructed_detection_examples.png"
 )
 
