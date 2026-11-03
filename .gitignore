@@ -17,3 +17,8 @@ results/*
 # Local environments and secrets
 .venv/
 .env
+
+# Local development context and presentation figure bundle
+/redesign_context.txt
+/redesign_runner_context.txt
+/reports/project-update/slides/project-update-figures.zip
