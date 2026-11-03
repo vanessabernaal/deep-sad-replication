@@ -1,31 +1,68 @@
-# Deep SAD: A Method for Deep Semi-Supervised Anomaly Detection
+# Deep SAD: Replication and Extensions
 
-> **Replication and extension project:** This fork is being developed for the
-> COMP8240 Applications of Data Science project at Macquarie University. It
-> updates the original implementation for a modern Python environment and
-> extends it with GalaxyMNIST and a programmatically constructed corrupted
-> MNIST dataset.
+This repository contains the COMP8240 Applications of Data Science project by Vanessa Fernanda Bernal Hernandez, Macquarie University.
 
-## Project Replication and Extensions
+It builds on the official implementation of **Deep Semi-Supervised Anomaly Detection**, introduced by Ruff et al. at ICLR 2020.
 
-The current project evaluates whether limited labelled anomalies improve Deep
-SAD under three conditions:
+- Original paper: https://arxiv.org/abs/1906.02694
+- Original implementation: https://github.com/lukasruff/Deep-SAD-PyTorch
+- Project development branch: `final-report`
 
-1. a reduced replication of the original MNIST experiments;
-2. a new scientific image domain using GalaxyMNIST;
-3. controlled MNIST corruptions using rotation, Gaussian noise, and square
-   occlusion.
+The Deep SAD method and original architectures belong to the original authors. This project adapts the implementation to a modern CPU environment and adds datasets, experiment automation, validation, and analysis.
 
-The repository includes a reproducible Conda environment, dataset-generation
-scripts, additional dataset loaders, a resumable experiment runner, pilot
-results, and qualitative detection examples.
+## Project scope
 
-See the [project update](reports/project-update/README.md) for the current
-experimental status, results, evidence, and next steps.
+The project investigates whether limited labelled anomalies improve ROC-AUC in three settings:
 
-For this fork, use `environment.yml` instead of the original legacy
-`requirements.txt`. The remainder of this README preserves the documentation
-from the original authors.
+1. A reduced replication on MNIST: normal digits 0 and 3, labelled-anomaly ratios of 0%, 1%, and 5%, and three random seeds.
+2. An extension to GalaxyMNIST: one normal morphology class, 0% and 5% labelled anomalies, and three random seeds.
+3. A constructed MNIST dataset: clean images, rotation, Gaussian noise, and square occlusion, evaluated with 0% and 5% labelled anomalies across three random seeds.
+
+MNIST and GalaxyMNIST currently have five-epoch pilot evaluations.
+The corrected constructed MNIST evaluation uses 100 autoencoder pretraining epochs and 50 Deep SAD epochs, retaining incomplete batches so that every selected training observation is used in each epoch.
+
+## Documentation
+
+- [Project contributions and attribution](docs/contributions.md)
+- [Repository structure and reproduction guide](docs/repository-guide.md)
+- [Historical project update](reports/project-update/README.md)
+
+The project-update material records an earlier stage of development.
+Its constructed-dataset description and results have been superseded by the corrected evaluation described below.
+
+## Code and evidence locations
+
+| Location | Purpose |
+| `src/` | Original implementation and project adaptations |
+| `scripts/` | Dataset generation, experiment execution, and analysis |
+| `environment.yml` | Software environment for this project |
+| `reports/project-update/evidence/mnist-pilot/` | MNIST pilot evidence |
+| `reports/project-update/evidence/galaxy-pilot/` | GalaxyMNIST pilot evidence |
+| `results/final-full-batches/` | Corrected constructed MNIST results and configurations |
+| `results/experiments-50ep-ae100/` | Earlier constructed evaluation with incomplete batches discarded |
+
+The corrected constructed evaluation contains 24 runs: four image conditions, two labelled-anomaly ratios, and three seeds. Each test condition contains 100 normal images and 900 anomalous images.
+
+Each model is trained and tested in the same image condition.
+These experiments do not evaluate a clean-trained model under test-time corruption.
+
+## Environment
+
+Run project commands from the repository root. Use the project environment rather than the original legacy `requirements.txt`:
+
+```bash
+conda env create -f environment.yml
+conda activate deep-sad
+```
+
+Dataset files and trained model weights are not included in the committed result evidence. The generation and training scripts recreate them.
+
+## Original authors' documentation
+
+The documentation below is retained from the original repository.
+Its installation instructions and example commands describe the upstream implementation. For this project's environment and experiments, use the project documentation linked above.
+
+---
 
 ---
 
