@@ -2,8 +2,7 @@ from pathlib import Path
 
 import numpy as np
 import torch
-from torch.utils.data import Dataset, Subset
-
+from torch.utils.data import DataLoader, Dataset, Subset
 from base.torchvision_dataset import TorchvisionDataset
 from .preprocessing import create_semisupervised_setting
 
@@ -119,6 +118,29 @@ class ConstructedMNIST_Dataset(TorchvisionDataset):
             corruption_name=self.corruption_name,
             normal_class=normal_class,
         )
+    def loaders(
+        self,
+        batch_size,
+        shuffle_train=True,
+        shuffle_test=False,
+        num_workers=0,
+    ):
+        """Include every observation, including incomplete batches."""
+        train_loader = DataLoader(
+            self.train_set,
+            batch_size=batch_size,
+            shuffle=shuffle_train,
+            num_workers=num_workers,
+            drop_last=False,
+        )
+        test_loader = DataLoader(
+            self.test_set,
+            batch_size=batch_size,
+            shuffle=shuffle_test,
+            num_workers=num_workers,
+            drop_last=False,
+        )
+        return train_loader, test_loader
 
 
 class ConstructedMNISTTensorDataset(Dataset):
