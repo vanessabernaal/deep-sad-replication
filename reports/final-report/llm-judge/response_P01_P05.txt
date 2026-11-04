@@ -1,0 +1,6 @@
+pair_id	original_digit	transformed_digit	identity_preservation	visible_transformation	recognisability_B	comment
+P01	3	3	preserved	square_occlusion	2	A middle-right section of the lower curve is missing, but the remaining strokes clearly form a 3.
+P02	4	4	preserved	square_occlusion	2	Parts of the upper-right stroke are missing, but the overall shape remains recognisable as a 4.
+P03	3	3	preserved	gaussian_noise	2	Speckled grayscale noise appears throughout the background and digit, but the 3 remains clearly identifiable.
+P04	2	2	preserved	square_occlusion	1	A central section of the lower stroke is missing, making the 2 fragmented but still plausible.
+P05	5	5	preserved	rotation	2	The digit appears tilted relative to the original, but its upper bar and lower curve remain recognisable as a 5.

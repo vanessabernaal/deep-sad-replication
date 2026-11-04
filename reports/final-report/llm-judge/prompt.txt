@@ -1,0 +1,40 @@
+You are reviewing the visual quality of transformed handwritten-digit images for a research project.
+
+Each attached image contains a pair identified by an ID such as P01:
+A is the original image and B is its transformed version.
+
+Evaluate each pair independently. Use only the visible images.
+Do not assume that a transformation preserves the digit's identity.
+Do not use external tools or previous conversation context.
+
+For each pair, report:
+
+1. original_digit: the digit visible in A, from 0 to 9, or "uncertain".
+2. transformed_digit: the digit visible in B, from 0 to 9, or "uncertain".
+   Judge B by its visible appearance, rather than copying your answer for A.
+3. identity_preservation:
+   - "preserved": both images clearly depict the same digit.
+   - "ambiguous": either image is unclear, so preservation is uncertain.
+   - "changed": the images clearly depict different digits.
+4. visible_transformation:
+   - "rotation"
+   - "gaussian_noise"
+   - "square_occlusion"
+   - "none_visible"
+   - "uncertain"
+   These describe visual appearance; do not claim to verify the exact
+   generation algorithm or parameters.
+5. recognisability_B:
+   - 2: clearly recognisable as one digit.
+   - 1: a plausible digit can be identified, but another interpretation
+     is reasonable.
+   - 0: no reliable digit identification is possible.
+6. comment: a brief explanation based on visible evidence, no more
+   than 25 words.
+
+Return one table with these exact columns:
+pair_id | original_digit | transformed_digit | identity_preservation |
+visible_transformation | recognisability_B | comment
+
+Include every attached pair exactly once. Do not invent missing pairs.
+Do not provide an overall conclusion or revise answers to make the results more consistent.

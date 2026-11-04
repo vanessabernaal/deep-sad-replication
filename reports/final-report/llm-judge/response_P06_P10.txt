@@ -1,0 +1,6 @@
+pair_id	original_digit	transformed_digit	identity_preservation	visible_transformation	recognisability_B	comment
+P06	9	9	preserved	gaussian_noise	2	Background noise and pixel intensity variations are visible, but the digit's shape remains recognisable as 9.
+P07	4	4	preserved	rotation	2	The digit is slightly rotated, with altered stroke orientation, but remains clearly recognisable as 4.
+P08	1	1	preserved	square_occlusion	1	A black rectangular region removes part of the vertical stroke, but the remaining segments suggest 1.
+P09	8	8	preserved	gaussian_noise	1	Noticeable background noise disrupts the strokes, but the two-loop structure remains suggestive of 8.
+P10	9	4	changed	square_occlusion	1	A black square obscures the upper central region, making the remaining strokes resemble a 4 rather than the original 9.

@@ -1,0 +1,30 @@
+Evaluation date: 2026-11-04
+Service: ChatGPT
+Model shown in interface: GPT-6.1 Sol
+Reasoning setting shown: Medio
+Session mode: Temporary chat without personalisation
+Procedure: Six separate chats, five pairs per chat, identical prompt.
+The first response from each chat was retained without requesting revisions.
+The reference manifest and Deep SAD scores were not provided to the judge.
+
+Sample: 30 pairs from 10 training source images, one per digit.
+Each source image appears under three transformations.
+Pairs are therefore not independent observations.
+
+Results:
+Original digit agreement with reference: 28/30.
+Transformed digit agreement with source label: 27/30.
+Transformation agreement with generation metadata: 29/30.
+Identity preservation judged preserved: 29/30; changed: 1/30.
+Recognisability: score 2 for 26 pairs; score 1 for 4 pairs.
+
+Limitations:
+Source labels are references, not independent human assessments of
+transformed-image appearance. Identity-preservation judgements do not
+establish correct digit recognition.
+P16 and P22 share the same source image labelled 8, which the judge
+read as 6 in both original and transformed panels.
+The subsequent discussion of P10, P16, P22 and P26 was AI-assisted,
+informed by the reference labels, and was not independent human validation.
+This exploratory audit did not change the dataset or retrain Deep SAD.
+The displayed model label does not identify a fixed backend snapshot.

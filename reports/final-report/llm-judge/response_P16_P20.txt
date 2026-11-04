@@ -1,0 +1,6 @@
+pair_id	original_digit	transformed_digit	identity_preservation	visible_transformation	recognisability_B	comment
+P16	6	6	preserved	rotation	2	The transformed digit appears rotated, but its distinctive upper curve and lower loop remain recognisable as a 6.
+P17	6	6	preserved	square_occlusion	2	A black square-like region interrupts the lower-left portion of the loop, but the digit remains clearly recognisable as 6.
+P18	7	7	preserved	gaussian_noise	2	Speckled background noise is visible, but the horizontal top stroke and descending right stroke clearly form a 7.
+P19	5	5	preserved	gaussian_noise	2	Background noise surrounds the strokes, but the upper horizontal line and lower curved portion remain recognisable as 5.
+P20	2	2	preserved	gaussian_noise	2	Speckled noise is present throughout the background, while the curved top and descending stroke still indicate a 2.

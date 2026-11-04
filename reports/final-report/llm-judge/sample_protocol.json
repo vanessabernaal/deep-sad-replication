@@ -1,0 +1,12 @@
+{
+  "sampling_seed": 42,
+  "source_split": "train",
+  "source_images": 10,
+  "pairs": 30,
+  "sampling": "One randomly selected source per digit.",
+  "pair_order": "Shuffled after selecting source images.",
+  "source_file_sha256": "b5ed86741739230cd92643acbe6fbbbfc86bf1d755d8b361df54465867a4388c",
+  "purpose": "Post-hoc exploratory visual quality review.",
+  "selection_uses_deep_sad_scores": false,
+  "evaluation_completed": false
+}

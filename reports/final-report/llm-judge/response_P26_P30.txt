@@ -1,0 +1,6 @@
+pair_id	original_digit	transformed_digit	identity_preservation	visible_transformation	recognisability_B	comment
+P26	6	6	preserved	gaussian_noise	2	The transformed image retains the characteristic loop and upper stroke of a 6, with visible pixel-level noise.
+P27	0	0	preserved	square_occlusion	2	A square black region obscures part of the lower loop, but the remaining outline clearly resembles 0.
+P28	5	5	preserved	square_occlusion	2	The right section of the upper horizontal stroke is removed, but the remaining structure clearly forms a 5.
+P29	7	7	preserved	square_occlusion	2	A rectangular black region interrupts the upper horizontal stroke, but the remaining strokes clearly indicate 7.
+P30	7	7	preserved	rotation	2	The transformed 7 is visibly rotated, with its top stroke sloping downward and its descending stroke tilted.

@@ -1,0 +1,6 @@
+pair_id	original_digit	transformed_digit	identity_preservation	visible_transformation	recognisability_B	comment
+P11	9	9	preserved	rotation	2	The transformed 9 appears slightly rotated, but its loop and descending stroke remain clearly recognisable.
+P12	1	1	preserved	gaussian_noise	2	Background noise is visible throughout B, but the bright vertical stroke remains clearly identifiable as 1.
+P13	3	3	preserved	rotation	2	The transformed 3 is slightly rotated, while its two curved sections remain recognisable.
+P14	6	6	preserved	gaussian_noise	2	Speckled background noise surrounds the digit, but the characteristic loop and upper stroke remain clearly visible.
+P15	1	1	preserved	rotation	2	The transformed 1 has a noticeable tilt, but its main stroke and overall shape remain recognisable.

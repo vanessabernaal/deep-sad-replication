@@ -1,0 +1,6 @@
+pair_id	original_digit	transformed_digit	identity_preservation	visible_transformation	recognisability_B	comment
+P21	2	2	preserved	rotation	2	B retains the curved upper stroke and descending lower stroke of a 2, with a slight change in orientation.
+P22	6	6	preserved	square_occlusion	2	B has a missing section in the upper-left stroke, but the remaining structure is clearly recognisable as a 6.
+P23	0	0	preserved	rotation	2	B retains the closed loop of a 0, with a visible change in orientation and overall alignment.
+P24	0	0	preserved	gaussian_noise	2	B shows scattered background noise and pixel intensity variations, but the closed loop remains clearly recognisable as a 0.
+P25	4	4	preserved	gaussian_noise	2	B contains visible background noise, but the branching upper strokes and descending vertical stroke remain recognisable as a handwritten 4.

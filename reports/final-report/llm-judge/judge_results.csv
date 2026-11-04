@@ -1,0 +1,31 @@
+pair_id,original_digit,transformed_digit,identity_preservation,visible_transformation,recognisability_B,comment,response_file,source_index,reference_digit,reference_corruption,original_matches_reference,transformed_matches_reference,transformation_matches_reference
+P01,3,3,preserved,square_occlusion,2,"A middle-right section of the lower curve is missing, but the remaining strokes clearly form a 3.",response_P01_P05.txt,57864,3,square_occlusion,True,True,True
+P02,4,4,preserved,square_occlusion,2,"Parts of the upper-right stroke are missing, but the overall shape remains recognisable as a 4.",response_P01_P05.txt,20633,4,square_occlusion,True,True,True
+P03,3,3,preserved,gaussian_noise,2,"Speckled grayscale noise appears throughout the background and digit, but the 3 remains clearly identifiable.",response_P01_P05.txt,57864,3,gaussian_noise,True,True,True
+P04,2,2,preserved,square_occlusion,1,"A central section of the lower stroke is missing, making the 2 fragmented but still plausible.",response_P01_P05.txt,854,2,square_occlusion,True,True,True
+P05,5,5,preserved,rotation,2,"The digit appears tilted relative to the original, but its upper bar and lower curve remain recognisable as a 5.",response_P01_P05.txt,20878,5,rotation,True,True,True
+P06,9,9,preserved,gaussian_noise,2,"Background noise and pixel intensity variations are visible, but the digit's shape remains recognisable as 9.",response_P06_P10.txt,8503,9,gaussian_noise,True,True,True
+P07,4,4,preserved,rotation,2,"The digit is slightly rotated, with altered stroke orientation, but remains clearly recognisable as 4.",response_P06_P10.txt,20633,4,rotation,True,True,True
+P08,1,1,preserved,square_occlusion,1,"A black rectangular region removes part of the vertical stroke, but the remaining segments suggest 1.",response_P06_P10.txt,12128,1,square_occlusion,True,True,True
+P09,8,8,preserved,gaussian_noise,1,"Noticeable background noise disrupts the strokes, but the two-loop structure remains suggestive of 8.",response_P06_P10.txt,56636,8,gaussian_noise,True,True,True
+P10,9,4,changed,square_occlusion,1,"A black square obscures the upper central region, making the remaining strokes resemble a 4 rather than the original 9.",response_P06_P10.txt,8503,9,square_occlusion,True,False,True
+P11,9,9,preserved,rotation,2,"The transformed 9 appears slightly rotated, but its loop and descending stroke remain clearly recognisable.",response_P11_P15.txt,8503,9,rotation,True,True,True
+P12,1,1,preserved,gaussian_noise,2,"Background noise is visible throughout B, but the bright vertical stroke remains clearly identifiable as 1.",response_P11_P15.txt,12128,1,gaussian_noise,True,True,True
+P13,3,3,preserved,rotation,2,"The transformed 3 is slightly rotated, while its two curved sections remain recognisable.",response_P11_P15.txt,57864,3,rotation,True,True,True
+P14,6,6,preserved,gaussian_noise,2,"Speckled background noise surrounds the digit, but the characteristic loop and upper stroke remain clearly visible.",response_P11_P15.txt,22936,6,gaussian_noise,True,True,True
+P15,1,1,preserved,rotation,2,"The transformed 1 has a noticeable tilt, but its main stroke and overall shape remain recognisable.",response_P11_P15.txt,12128,1,rotation,True,True,True
+P16,6,6,preserved,rotation,2,"The transformed digit appears rotated, but its distinctive upper curve and lower loop remain recognisable as a 6.",response_P16_P20.txt,56636,8,rotation,False,False,True
+P17,6,6,preserved,square_occlusion,2,"A black square-like region interrupts the lower-left portion of the loop, but the digit remains clearly recognisable as 6.",response_P16_P20.txt,22936,6,square_occlusion,True,True,True
+P18,7,7,preserved,gaussian_noise,2,"Speckled background noise is visible, but the horizontal top stroke and descending right stroke clearly form a 7.",response_P16_P20.txt,9494,7,gaussian_noise,True,True,True
+P19,5,5,preserved,gaussian_noise,2,"Background noise surrounds the strokes, but the upper horizontal line and lower curved portion remain recognisable as 5.",response_P16_P20.txt,20878,5,gaussian_noise,True,True,True
+P20,2,2,preserved,gaussian_noise,2,"Speckled noise is present throughout the background, while the curved top and descending stroke still indicate a 2.",response_P16_P20.txt,854,2,gaussian_noise,True,True,True
+P21,2,2,preserved,rotation,2,"B retains the curved upper stroke and descending lower stroke of a 2, with a slight change in orientation.",response_P21_P25.txt,854,2,rotation,True,True,True
+P22,6,6,preserved,square_occlusion,2,"B has a missing section in the upper-left stroke, but the remaining structure is clearly recognisable as a 6.",response_P21_P25.txt,56636,8,square_occlusion,False,False,True
+P23,0,0,preserved,rotation,2,"B retains the closed loop of a 0, with a visible change in orientation and overall alignment.",response_P21_P25.txt,49815,0,rotation,True,True,True
+P24,0,0,preserved,gaussian_noise,2,"B shows scattered background noise and pixel intensity variations, but the closed loop remains clearly recognisable as a 0.",response_P21_P25.txt,49815,0,gaussian_noise,True,True,True
+P25,4,4,preserved,gaussian_noise,2,"B contains visible background noise, but the branching upper strokes and descending vertical stroke remain recognisable as a handwritten 4.",response_P21_P25.txt,20633,4,gaussian_noise,True,True,True
+P26,6,6,preserved,gaussian_noise,2,"The transformed image retains the characteristic loop and upper stroke of a 6, with visible pixel-level noise.",response_P26_P30.txt,22936,6,rotation,True,True,False
+P27,0,0,preserved,square_occlusion,2,"A square black region obscures part of the lower loop, but the remaining outline clearly resembles 0.",response_P26_P30.txt,49815,0,square_occlusion,True,True,True
+P28,5,5,preserved,square_occlusion,2,"The right section of the upper horizontal stroke is removed, but the remaining structure clearly forms a 5.",response_P26_P30.txt,20878,5,square_occlusion,True,True,True
+P29,7,7,preserved,square_occlusion,2,"A rectangular black region interrupts the upper horizontal stroke, but the remaining strokes clearly indicate 7.",response_P26_P30.txt,9494,7,square_occlusion,True,True,True
+P30,7,7,preserved,rotation,2,"The transformed 7 is visibly rotated, with its top stroke sloping downward and its descending stroke tilted.",response_P26_P30.txt,9494,7,rotation,True,True,True
