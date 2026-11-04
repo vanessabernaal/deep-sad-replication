@@ -180,5 +180,6 @@ Presentation-stage figures must be regenerated from the corrected results before
 
 The repository contains MNIST and GalaxyMNIST pilots and the corrected constructed evaluation. The proposed screening of five external dataset candidates was not part of the verified completed experiments.
 
-LLM-based quality control remains pending at this documentation stage.
-Its procedure and evidence will be added when completed.
+An exploratory LLM-as-judge audit was completed using ChatGPT (GPT-6.1 Sol, reasoning setting “Medio”) in six temporary chats without personalisation, using an identical prompt and retaining each first response.
+The sample contains 30 image pairs derived from 10 training source images, with three transformations per source. Agreement with reference labels was 28/30 for original digits, 27/30 for transformed digits, and 29/30 for transformation types. The judge reported preserved identity in 29/30 pairs; this judgement does not establish correct digit recognition. The pairs are not independent, and the audit did not alter the dataset or retrain Deep SAD.
+The protocol, prompt, images, reference manifest, raw responses, evaluation notes and derived results are stored in reports/final-report/llm-judge/. Run python scripts/summarize_llm_judge.py to regenerate judge_results.csv from the saved responses.
